@@ -1,0 +1,28 @@
+.cards{
+    background-color: wheat; 
+    /*color me indica el color de la letra o foreground*/
+    color: black;
+    /*ancho del la caja*/
+    width: auto;
+    /* max-width: ;  me permite indicarle el ancho maximo de un elemento es decir que 
+     * si su contenido va a sobrepasar el los 300 px no los tomaria*/
+    max-width: 300px;
+    /*height nos permite darleel alto a nuestra caja */
+    height: auto;
+    max-height: 400PX;
+    overflow: scroll;
+
+    /* lo anterior son todas las propiedades que nos permiten manipular el 
+     * ancho y alto de nuestras cajas aunque se puede cambira usando boxsizin */
+
+    /*------------------------------------------------------------------------------------------*/
+     /*A continuacion la capa de relleno que se encuentra entree el contenido del elmetno y el borde "paddin"
+      * contiene 4 subpropiedades top right botton left
+      * si al padding le damos dos valores ej padding: 10px 20px;
+      * se tomarian 10 para top y botton y 20 para rigth y left*/
+     
+    padding: 10px;
+    padding-top: 50px;
+    /*el padding puede cambiar el tamaño del elemento */
+    
+}
