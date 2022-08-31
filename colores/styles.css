@@ -1,15 +1,25 @@
+/* Maneras para agregar colores a css */
 *{
+    /*para evitar tener que establecer cada lado por separado
+     con las otras propiedades de margen:
+      margin-top (en-US), margin-right , margin-bottom y margin-left*/
     margin: 0%;
     box-sizing: border-box;
 }
 body{
-
+    /* La propiedad font-family define una lista de fuentes o familias de fuentes*/
     font-family: Arial, Helvetica, sans-serif;
 }
 .container{
     padding: 70px;
 }
 .div-title{
-
+    /* pra el color se pudes poner directamente el color 
+     * o se puede agregar la combinacion rgb */
     color: lightsalmon ;
+    /* si se le agrega desde .1 hasta .9 luego del rgb se le aplicaria cierto niverl de transparencia al texto*/
+    color:rgb(255,150,110, .5);
+    /* esto funciona para cualquier propiedad que utilice color*/
+    bac
+
 }
