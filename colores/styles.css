@@ -14,12 +14,53 @@ body{
     padding: 70px;
 }
 .div-title{
+    margin-top: 50px;
     /* pra el color se pudes poner directamente el color 
      * o se puede agregar la combinacion rgb */
     color: lightsalmon ;
     /* si se le agrega desde .1 hasta .9 luego del rgb se le aplicaria cierto niverl de transparencia al texto*/
     color:rgb(255,150,110, .5);
-    /* esto funciona para cualquier propiedad que utilice color*/
-    bac
+    /* esto funciona para cualquier propiedad que utilice color ejemplo ahora le daremos un backgranun color*/
+    background-color: #00f0ff; /* de esta forma tambien podemos darle colores a las propedades (exsadesimal) 
+                                  * las dos ff indican el maximo tono de clores de los rgb*/
+    display: inline-block;/*convierto esta etiqueta en una de linea*/
+}
 
+/*ahora hablaremos de la propiedad bakgroun*/
+.container{
+    margin-bottom: 50px;
+    background-color: magenta;
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 50px;
+    height: 300px;
+    background-image: url(imagenes/venom.jfif);/*y de esta manera le damos una imagen de fondo a una caja en css*/
+    /* si la imagen se repite es porque se la caja es demasiado grande para la imagen esto lo cambiamos de la siguiente manera*/
+    background-repeat: no-repeat;
+    background-position: center;/* y de estam menera centramos el fondo de la imagen tambien podemos usar el shortan */
+    background-size: cover;/* esta propiedad hace que la imagen se estire al tamaño del elemento o de la caja */
+    /* background-size: contain;esta imagen hace que la imagen de fondo se adapte y mueste todo su conenido */
+}
+
+/* en el background tambien podemos usar gradientes lo veremos a continuacion con otra caja */
+.container2{
+    background-color: magenta;
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 600px;
+    height: 600px;
+    /* para usar la gradiente tomamos la funcion linear-gradient*/
+    /* background: linear-gradient(#f00,#00f0ff); */
+    background-image: linear-gradient(rgba(41, 41, 167, 0.814),rgba(160, 26, 131, 0.288)), url(imagenes/disney-park.blogs-3.jpg);
+    /* lo que se izo, se creo un linear grtadient que permite poner dos colores con traspariencia despues una coma para agregar 
+     * una imaen poara que el fondo se sobreponga a la imagen y se cree el efecto
+     */
+    background-repeat: no-repeat;
+    background-position: center;/* y de estam menera centramos el fondo de la imagen tambien podemos usar el shortan */
+    background-size: cover;/* esta propiedad hace que la imagen se estire al tamaño del elemento o de la caja */
+    /* background-size: contain;esta imagen hace que la imagen de fondo se adapte y mueste todo su conenido */
+    text-align: center;
+    padding: 200px;
+    color: aliceblue;
+    border-radius: 50px;
 }

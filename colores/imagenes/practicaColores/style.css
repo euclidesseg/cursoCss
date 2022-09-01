@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #c0e4fc;
+}
+/*-----------------recomendado hacer esto siempre con css al primcipio */
+.card{
+    width: 320px;
+    min-height: 400px;/*alto minimo*/
+    background-color: #fff;
+    margin: 0 auto;
+    /*se pone el margin top despues de margin auto ya que de lo contrario el margin auto lo modifica*/
+    margin-top: 70px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.418);
+    /*pixceles en x*/    /*pixceles en y*/    /*desenfoque*/    /*color*/
+    /*separare comentarios de acuerdo a las propiedades del box shadow*/
+
+    background-image: linear-gradient(to top, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);
+     background-size: 100% 150px; /* que tenga 100% de anch y solo 150 de alto  con esto el dondo se va a repetir*/
+     background-repeat: no-repeat;
+     text-align: center;
+     padding: .1px;
+}
+.card_person{
+    background-image: url('person.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 110px;
+    height: 110px;
+    margin: 0 auto;
+    margin-top: 106px;/* al poner esto no me toma el margen debido al colapso de
+                       * margenes la solucion es darle un paddin ap padre de .1px*/
+    border-radius: 50%;/* para que se redondee*/
+    border: 7px solid#fff;
+}
+.card_media{
+    margin-top: 40px;
+    width: 100%;
+    height: 90px;
+    border-top: 1px solid rgb(133, 119, 119);
+    display: flex ;/*esto me pone a cada elmento uno delante dle otro*/
+    justify-content: center;
+}
+.card_icon{
+    width: 25%;
+    height: 100%;
+    display: block;
+}
+.card_icon--facebook{
+    background-image: url(images/facebook.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card_icon--twitter{
+    background-image: url(images/twiter.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card_icon--youtube{
+    background-image: url(images/youtube.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
