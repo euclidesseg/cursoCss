@@ -1,0 +1,59 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Poppins:wght@300;700&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.hero{
+    height: 1200px;
+    /*puedo usar background multiples*/
+    background-image:/*desde aqui*/url('icon/wave.svg'), linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-size: 100% 100% cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.hero_container{
+    height: 100%;
+    width: 90%;
+    color: #fff;
+    padding: 100px 0;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden ;
+    text-align: center;
+}
+.hero_title{
+    text-align: center;
+    width: 70%;
+    display: block;
+    font-size: 45px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hero_parragraph{
+    width: 70%;
+    margin:15px auto;
+    text-align: center;
+}
+.hero_cta{
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 20px;
+}
+.hero_picture{
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hero_img{
+    display: block;
+    width: 100%;
+}
