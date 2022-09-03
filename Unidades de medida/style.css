@@ -1,0 +1,19 @@
+*{
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: yellow;
+    min-height: 1000px;
+}
+.container{
+    margin-left: 0%;
+    padding: 40px;
+    width: 30%;/*referente al ancho de su padre mas cercano
+    */
+    /* para definir la unidad realtiva del tamaño del wiewprot en el wid se agrega*/
+    /*width: 0vw; /*toma el 0% del tamaño del viwport del su contenedor*/
+    width: 50vw;
+    background-color: aqua;
+    /*si le pongo al body un alto minimo de 1000px tambien contaria al viewport como elk scrol*/
+}

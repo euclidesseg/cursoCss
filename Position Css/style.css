@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(143, 195, 241);
+}
+.container{
+    width: 700px;
+    height: 700px;
+    margin-top: 20px;
+    padding: 20px;
+    margin-left: 20px;
+    border-radius: 50px;
+    background-color: rgb(222, 226, 226);
+    box-shadow: 15px 15px 40px;
+
+}
+.element{
+    width: 200px;
+    height: 150px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.static{
+    background-color: rgb(207, 85, 85);
+}
+.relative{
+    background-color: rgb(55, 58, 230);
+}
+.absolute{
+    background-color: rgb(222, 235, 110);
+}
+.fixed{
+    background-color: rgb(240, 97, 30);
+}

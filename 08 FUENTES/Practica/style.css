@@ -11,8 +11,10 @@ body{
 .hero{
     height: 1200px;
     /*puedo usar background multiples*/
+    /*para poner la gradiente en este caso se agrega la url de donde esta la imagen gradiente */
     background-image:/*desde aqui*/url('icon/wave.svg'), linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    background-size: 100% 100% cover;
+    background-size: 100% 150px cover;
+    /*el primer valor se timara para la imagen de wave(100% 150px) y el segundo valor se tomara para el graditnete(cover)*/
     background-repeat: no-repeat;
     background-position: bottom;
 }
