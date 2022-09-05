@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);}
+main{
+    position: relative;
+}
+.hero{
+    position: absolute;
+    width: 30%;
+    height: 350px;
+    margin-top: 50px;
+    margin-left: 20px;
+    background-color: aliceblue;
+    border-radius: 30px;
+}
+.hero_picture{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+}
+.form{
+    background-color: rgb(214, 226, 226);
+    width: 40%;
+    height: 800px;
+    position: relative;
+    top: 0;
+    left: 35%;
+    border-radius: 25px;
+    z-index: 300;
+}
+.footer{
+    height:300px;
+    width: 100%;
+    background-image: linear-gradient(to top, #222424 0%, #0c0c0c 100%);
+    position: relative;
+    bottom: 0px;
+}

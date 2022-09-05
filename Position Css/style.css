@@ -7,7 +7,7 @@
 }
 body{
     background-color: rgb(143, 195, 241);
-    min-height: 500vw;/* de esa mener as eplica scrol al navegador*/
+    min-height: 500vw;/* de esa menera se aplica scrol al navegador*/
 }
 .container{
     width: 700px;
