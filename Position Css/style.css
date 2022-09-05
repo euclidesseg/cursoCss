@@ -1,9 +1,13 @@
+/*el flujo del navegador es la manera en quue cada elemento se va posicionando
+ * por defecto los elementos siempre se uvican en la parte de arriba y a la izquierda
+ * ahora controlaremos el flujo con la propiedad posision*/
 *{
     margin: 0;
     box-sizing: border-box;
 }
 body{
     background-color: rgb(143, 195, 241);
+    min-height: 500vw;/* de esa mener as eplica scrol al navegador*/
 }
 .container{
     width: 700px;
@@ -19,18 +23,75 @@ body{
 .element{
     width: 200px;
     height: 150px;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 34px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .static{
+    /*position static es el valor por defecto que todos tienen ya que no tienen otro posision agregato
+     * estatic no cuenta como un elemetno posicionado porque al darle top; no me genral ningun*/
     background-color: rgb(207, 85, 85);
 }
 .relative{
     background-color: rgb(55, 58, 230);
+     /* position relative -- al agregarla no pasa nada pero esta propiedad desbloquea cuatro valores que permiten desplazar al elemetno 
+      * atravez del navegador top rigth botton left*/
+    /* position: relative; */
+
+    /*top:220px;/*permitye mover al alemetnto desde su parte superior asi mismo tambien le puedo dar un valor en menos*/
+    
+    right: -30px;/* si esta en positivo lo mueve desde la derecha hacia la izquierda si es negativo lo mueve de izquierda a derecha*/
+
+    /*bottom: 100px;/* lo movera 100 px hacia arriba, si es positivo se aplica solo si no tiene un top*/
+
+    left: -10px;/*si es positivo lo movera de izquiera a deecha si es negaticvo lo movera hacia la izquierda*/
+    /* esta propiedad es diferente al margin top porque 
+     * aunque mueve la caja de su eje, no desplazara nunca a la que este debajo de ella
+     */
+
+     /* aunque se mueva esta caja su lugar original se seguira conservando de acuerdo al flujo*/
+
 }
 .absolute{
+    position: absolute;
+    /* Cuaando un elemento tiene el position absolut ese elemento es removido completamente del flujo es decir pierde su posicion
+     * en esta caso al perder su pocicion el elemento siguiente toma su luagar por debajo de el
+     * se mueve en base a su contenedor mas sercano que tenga un position diferente a static si no lo tiene se
+     * posisiona directamente al body*/
+     
+     /* bottom: 0px;
+     right: 0px; */
     background-color: rgb(222, 235, 110);
+    top: 10px;
+    left: 110px;
+    z-index: 300;
 }
 .fixed{
     background-color: rgb(240, 97, 30);
+    /* cuanto se establece esa propiedad la caja se pegara directamente al vieport del navegador 
+     * es decir, si se le aplica scroll*/
+    position:fixed;
+
+}
+
+
+/* relative se coloca por encima de relative ya que ambos elementos tienen por defecto un z-index auto 
+ * y si ambos elementos tienen el mismo espacio se colocara por ensima el que fue escrito de ultimo 
+ * pero si quiero que relative se coloque primero agrego z-index de 200 y a fixed de 100*/
+.relative{
+    background-color: aqua;
+    position: relative;
+    left: 30px;
+    z-index: 200;
+
+}
+.fixed{
+    background-color: black;
+    position: fixed;
+    top: 80px;
+
+}
+.container_parragraph{
+    color: blue;
+    margin-top: 200px;
 }
