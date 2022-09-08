@@ -26,9 +26,9 @@ main{
 .form{
     background-color: rgb(214, 226, 226);
     width: 40%;
-    height: 800px;
+    height: 700px;
     position: relative;
-    top: 0;
+    top: 50px;
     left: 35%;
     border-radius: 25px;
     z-index: 300;
@@ -36,6 +36,7 @@ main{
 .footer{
     height:300px;
     width: 100%;
+    margin-top: 300px;
     background-image: linear-gradient(to top, #222424 0%, #0c0c0c 100%);
     position: relative;
     bottom: 0px;

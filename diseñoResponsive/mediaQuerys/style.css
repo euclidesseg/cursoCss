@@ -1,0 +1,15 @@
+
+
+/*MAX-WIDTH*/
+/* max-width en un mediaquerie indica cual sera el valor maximo que debe
+ * tener el viewport para que se aplique el css que esta dentro del mediaquery
+ * es decir si tenemos un max-wid de 600px significa que el mediaquery estara siempre
+ * y cuando el tamaño del viewport sea menor a 600px porque max wid define el tamaño maximo
+ * al cual se cumplira la condicion*/
+
+ /*MIN-WIDTH*/
+ /* min-width en un mediaquery indica cual sera   el valor minimo que debe rener
+  * el vieport para que se aplique el css que esta drentro del mediaquery
+  * es decir si tenemos un max-wid de 600px significa que el mediaquery estara siempre
+  * y cuando el tamaño del viewport sea mayor a 600 porque min-wid define el tamaño minimo
+  * que se necesita para que el mediaquerie cumpla la condicion*/
