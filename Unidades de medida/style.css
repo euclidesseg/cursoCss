@@ -5,6 +5,7 @@
 body{
     background-color: yellow;
     min-height: 1000px;
+    font-family: Arial;
 }
 .container{
     margin-left: 0%;
@@ -17,3 +18,14 @@ body{
     background-color: aqua;
     /*si le pongo al body un alto minimo de 1000px tambien contaria al viewport como elk scrol*/
 }
+
+/* en css exsisten dos clases de medidas */
+/* Absolutas
+ * Tinen un valor definido y no depende de nada mas por lo que nunca va a cambar */
+
+ /* ejemplo*/
+ .title{
+    font-size: 40px;/*es una unidad absoluta nunca cambia*/
+    /*puedo usar puntos(pt), milimetros(mm), o centimetros(cm)*/
+    font-size: 3pt;
+ }
