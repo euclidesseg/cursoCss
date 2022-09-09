@@ -7,17 +7,7 @@ body{
     min-height: 1000px;
     font-family: Arial;
 }
-.container{
-    margin-left: 0%;
-    padding: 40px;
-    width: 30%;/*referente al ancho de su padre mas cercano
-    */
-    /* para definir la unidad realtiva del tamaño del wiewprot en el wid se agrega*/
-    /*width: 0vw; /*toma el 0% del tamaño del viwport del su contenedor*/
-    width: 50vw;
-    background-color: aqua;
-    /*si le pongo al body un alto minimo de 1000px tambien contaria al viewport como elk scrol*/
-}
+
 
 /* en css exsisten dos clases de medidas */
 /* Absolutas
@@ -25,7 +15,47 @@ body{
 
  /* ejemplo*/
  .title{
-    font-size: 40px;/*es una unidad absoluta nunca cambia*/
+    font-size: 48px;/*es una unidad absoluta nunca cambia*/
     /*puedo usar puntos(pt), milimetros(mm), o centimetros(cm)*/
-    font-size: 3pt;
+    /* font-size: 3pt; */
  }
+ 
+ /* RELATIVAS
+  * Se llaman asi porque su tamaño dependen de algo externo a ellas significa que ese valor puede
+  * cambiar dependeiendo el contexto y el primer valor es la unidad:
+   REM = Es relativa al tamaño de la fuente o al font-size de la raiz del de la raiz del 
+  * documento la raiz del documento de visualiza con el selector html*/
+
+  /* Un rem por defecto es igual a 16 px pero puede llegar a variar dependiendo del tamaño
+   * de fuente que se agregue al navegador por defecto es normal*/
+   .title{
+    font-size: 3rem;
+    /* 16*3  se hace la multiplicacio porque 1 rem es igual al tamaño de letra del navegador 
+     * en este caso es 16 */
+   }
+   html{
+    /* por defecto = 16px*/
+    font-size: 20px;
+    /*aqui l ecambie el tramaño de la letra al navegador entonces 3 rem seria igual a 60px*/
+   }
+   /*EM = La unidad em es igual a la rem pero esta tomara la medida de de letra que tena su padre
+    * mas proximo*/
+
+    /* V(VEAWPORT) = Es el area visible que tenemos en el navegador desde la pertaña de direccion 
+     * hacia debajo*/
+
+     .container{
+        margin-left: 0%;
+        padding: 40px;
+        width: 30%;/*referente al ancho de su padre mas cercano
+        */
+        /* para definir la unidad realtiva del tamaño del wiewprot en el wid se agrega*/
+        /*width: 0vw; /*toma el 0% del tamaño del viwport del su contenedor*/
+        width: 100vw; /*se refiere al ancho el navegador*/
+        background-color: rgb(25, 0, 255);
+        /*si le pongo al body un alto minimo de 1000px tambien contaria al viewport como elk scrol*/
+    }
+     /* VH = Es el area visible del navegador habarcando en alto */
+
+     /* NOTAS: la unidad de viewport va desde 0 hasta 100 v tanto en ancaho(width) 
+      * com en alto(height)*/
