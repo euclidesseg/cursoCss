@@ -1,5 +1,7 @@
 
-
+body{
+    background-color: rgb(217, 198, 216);
+}
 /*MAX-WIDTH*/
 /* max-width en un mediaquerie indica cual sera el valor maximo que debe
  * tener el viewport para que se aplique el css que esta dentro del mediaquery
@@ -13,3 +15,43 @@
   * es decir si tenemos un max-wid de 600px significa que el mediaquery estara siempre
   * y cuando el tamaño del viewport sea mayor a 600 porque min-wid define el tamaño minimo
   * que se necesita para que el mediaquerie cumpla la condicion*/
+  .img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  @media(max-width:600px){
+    body{
+        background-color: brown;
+    }
+    /* esta media query es una forma condicional que aplicara los estilos que tenga dentro cuando se cumpla 
+   * el ancho maximo sea manor que 600*/
+  }
+
+   @media(min-width:600px){
+    body{
+        background-color: rgb(114, 93, 230);
+    }
+}
+
+/* la mejos manera de escribir media quey cuando se usa max-width es escribir el valoe mayor arriba 
+ * es decir en ca*/
+
+ /* Cuando usamos min-width primero iran los valores con menos valor men cascada*/
+
+ @media(max-width:370px){
+    .img{
+        width: 50%;
+    }
+ }
+ @media(min-width:800px){
+    .img{
+        width: 50%;
+        border-radius:50%
+    }
+ }
+
+ /* aprende esto cuando quiero que mida mas le pongo min-width
+  * cuando quiero que mida menos le pongo max-width*/

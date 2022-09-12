@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial;
+}
+.container{
+    width: 60%;
+    /* max-width: 200px; */
+    min-height: 400px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+
+    /* Flexbox es un modulo de css que fue diseñado para crear sitios flexibles 
+     * y adaptables a dispositivos moviles */
+
+     display: flex;/*pone a cada elementos del contenedor uno de lado de otro*/
+
+     /* al hacer display flex usamos flexbox y creamos un contexto donde el contenedor
+      * ahora se llara flex container y los elementos flex item 
+      * pero solamente los hijos directos del contenedor*/
+
+      /* En flexbox esisten 2 eges el main axis o eje principal de izquierda a derecha
+       * y el cros axis eje secundario de arriba hacia abajo*/
+      
+       /* flex-direction: row-reverse; */
+       /* empezara de derezha a izquierda en el main axis eje principal*/
+       /* flex-direction: column; */
+       /* hace que el main axis eje principal valla de arriba hacia abajo
+        * entonces el crox axis eje segundario ira de derecha a izquierda*/
+       /* flex-direction: column-reverse; */
+        /* en reversa de abajo hacia arriba para el main axis*/
+
+        /* ==================================================================================================================*/
+
+       flex-wrap:nowrap;
+       /* si algunos elementos sumando sus width sobrepasan el tamaño del contenedor se encogen 
+        * pero si se le da flex-wrap:wrap se van creando hacia habajo en modo crox axis*/
+
+       /* flex-wrap: wrap-reverse;
+       /* hace que el wrap:wrap valla en reversa de abajo hacia arriba */
+
+       /* ==================================================================================================================*/
+        flex-direction: row;
+        /* lo mas importante de flexbox es que permite cambiar la alineacion de los elementos en un eje
+         * para poder cambiar la alineacion de los elementos en main axis se deve tener espacio disponible en
+         * el eje que desea ca mbiar*/
+
+         /* justify-content: flex-start; */
+         /* aggrupa todos los elementos y los agrupa al principio o en main axis*/
+
+         /* justify-content: end; */
+         /* aggrupa todos los elementos y los agrupa de derecha a izquierda en main axis*/
+
+         /* justify-content: center; */
+         /* permite centrar los flex item si es row centra orizontalmente si es column centra verticalmente*/
+
+         /* justify-content: space-between; */
+         /* hace que los elementos se distribuyan equitativamente por todo el main axis se deve tener espacio disponible en el eje*/
+
+         /* justify-content: space-around; */
+         /* da espacio equitativo hacia todos los lados del elemento */
+
+         /* justify-content:space-evenly; */
+         /* da espaico equitativo tanto en esquina como en medio */
+
+
+        /* ==================================================================================================================*/
+        /* AHORA PASAMOS AL CROX AXIS O EN COLUMNA*/
+        /* para modificar la alineacion vertical del crox axis tenemos dos propiedades*/
+
+        /* align-items: stretch;  */
+        /* permite que todos los elementos que no tengan un heigth definido se estiren por todo el creox axis*/
+        /* align-items: flex-start; */
+        /* Manda los elementos al inicio del crox axis*/
+        /* align-items: flex-end; */
+        /* manda los elementos al dinal del croz axis*/
+        /* align-items: center; */
+        /* centra los elementos verticalmente*/
+        
+        /* =================================================================*/
+        /* la sigiente propiedad es align content funciona solo cuando hay mas de una fila o columna*/
+        /* align-content: flex-start; */
+        /* cuando uno o mas de un elemento se desbordan los agrupa y los manda al inicio*/
+        /* align-content: flex-end; */
+        /* manda los elementos al final*/
+        /* align-content: space-between; */
+        /* manda los elementos a las esquinas */
+        /* align-content: space-evenly; */
+        /* da espacios equitativamente tanto para esquina como para centro*/
+        /* align-content: center; */
+        /* centra todos los elementos*/
+
+    align-items: center;
+
+}
+.element{
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    background-color: salmon;
+    width: 300px;
+        /*provando flex*/
+        /* width: 300px; */
+        /* se agrego esto para probar el valor del wrap*/
+    height: 80px;
+    line-height: 100px;
+    /* con flex tambien tenemos propiedades para los flexitem*/
+
+    /* order: 0; propiedad permite cambiar eo orden de los flexitem por defecto es = 0
+     * le daremos a element2 un order de 1 para notar que se va de ultimo porque entre mayor sea 
+     * el order se pondra al final de los elementos*/
+    /* flex-row define el factor de cresimiento de todos los lementos 
+     * detecta si hay espacios sobrantes para determinar que tanto le va a quedar de espacio a cada elemento */
+     
+     flex-grow: 1;
+     /*por defecto es 1*/
+    /* con esto cada elemento va tomar el mismo espaio para abarcar el espacio sobrante
+     * si al elemento 3 le doy un flex geow de 2 ese elemento va a toamar el doble de espacio de los demas */
+    
+     /* flex-shrink: 1;  esta propiedad cuando esta en 0 hace que todos los elementos pierdan la habilidad de hacerce mas pequeños
+      * 1 es su valor por defecto 
+      * si al elmento 1 le doy un flex-shrink de 3 se hara 3 veces mas pequeño que los demas*/
+
+      /* flex-basis: ; indica el tamaño de los elementos en el main axis 
+       * por defecto el main axis es orizonal es decir por defecto define el width */
+       flex-basis: 150px;
+       width: 80px;/* no hace ningun efecto porque  flex basis tieene mas prioridad que width*/
+}
+.element1{
+    background-color: magenta;
+    /* flex-shrink: 3; */
+    /* para probar que si funciona vamos a cambiarle el ancho a los elementos por 300 y quitamos el flex-grow de element3*/
+}
+.element2{
+    border-color: tomato;
+    order: 1;
+    /* si le diera -1 se pondria al principio ya que -1 es menor que 0*/
+}
+.element3{
+    background-color: slateblue;
+    /* flex-grow: 2; */
+
+    /* align-self: ; permite alinear solamente al elemento que estamos seleccionando tiene los */
+    /* tien las mismas propiedades que align-items*/
+
+}

@@ -36,7 +36,7 @@ body{
    html{
     /* por defecto = 16px*/
     font-size: 20px;
-    /*aqui l ecambie el tramaño de la letra al navegador entonces 3 rem seria igual a 60px*/
+    /*aqui le cambie el tramaño de la letra al navegador entonces 3 rem seria igual a 60px*/
    }
    /*EM = La unidad em es igual a la rem pero esta tomara la medida de de letra que tena su padre
     * mas proximo*/

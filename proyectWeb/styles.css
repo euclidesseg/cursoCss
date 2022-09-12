@@ -41,3 +41,18 @@ main{
     position: relative;
     bottom: 0px;
 }
+@media(max-width:500px){
+    .form{
+        background-color: rgb(214, 226, 226);
+        width: 60%;
+        height: 400px;
+    }
+    .hero{
+        height: 70px;
+        border-radius: 0%;
+        margin-left: 0%;
+    }
+    .hero_picture{
+        border-radius: 0%;
+    }
+}
