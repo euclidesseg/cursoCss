@@ -1,12 +1,14 @@
 # Front-end Style Guide
-
+<!----------------------------------------------------------------------------------------------------->
 ## Layout
 
 The designs were created to the following widths:
 
 - Mobile: 375px
 - Desktop: 1440px
+<!-- Indica un brakepost para movile y el siguiente para desktop-->
 
+<!----------------------------------------------------------------------------------------------------->
 ## Colors
 
 ### Primary
@@ -19,6 +21,7 @@ The designs were created to the following widths:
 
 - Very Dark Cyan: hsl(192, 100%, 9%)
 - Very Pale Blue: hsl(207, 100%, 98%)
+<!----------------------------------------------------------------------------------------------------->
 
 ## Typography
 
@@ -31,7 +34,7 @@ The designs were created to the following widths:
 
 - Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
 - Weights: 400, 600, 700
-
+<!----------------------------------------------------------------------------------------------------->
 ## Icons
 
 For the social icons, you can use a font icon library. Some suggestions can be found below:
