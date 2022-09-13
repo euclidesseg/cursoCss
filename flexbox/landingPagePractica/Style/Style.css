@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+/* esta seudoclase es root esta representando a la raiz del documento puedo crear variables*/
+/* se llaman custon properties porque son propiedades que se crean y puedo ponerle cualquier valor que va dentro 
+ * de otra propiedad por ejempo --poppings: 'Open Sans', sans-serif;  a popings le agregue una propidadad de fontFamily 
+ *  aadi cuando valla a usar font family le agrego popings*/
+
+    --poppings: 'Open Sans', sans-serif;
+    --opensans: 'Poppins', sans-serif;
+
+    /*COLORES*/
+    --Pink: hsl(322, 100%, 66%);
+    --Light-Pink: hsl(321, 100%, 78%);
+    --Light-Red: hsl(0, 100%, 63%);
+    --Very-Dark-Cyan: hsl(192, 100%, 9%);
+    --Very-Pale-Blue: hsl(207, 100%, 98%);
+
+    /* padding para los contenedores padres*/
+    --paddin-container: 80px 0;
+    
+}
+
+body{
+    font-family: var(--opensans);
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    /* que su ancho no rebase los 1200px */
+    margin: 0 auto;
+    overflow: hidden;
+    /* que todo lo que salga del contenedor se esconda*/
+    padding: var(--paddin-container);
+}
+.hero{
+    min-height: 100vh;
+    position: relative;
+     /* para poder pocicionar la weid */
+}
+.hero_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    --paddin-container: 60px 0 45px
+    /* al cambiar este valor cambia tambien en hero_nav y en todos sus hijos*/
+}
+.hero_huddle{
+    display: block;
+    width: 150px;
+}
+.hero_cta{
+    text-align: center;
+    text-decoration: none;
+    color: var(--Light-Pink);
+    height: 30px;
+    width: 100px;
+    border: 2px solid;
+    border-radius: 35px;
+}
