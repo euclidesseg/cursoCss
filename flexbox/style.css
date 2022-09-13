@@ -110,7 +110,7 @@ body{
     line-height: 100px;
     /* con flex tambien tenemos propiedades para los flexitem*/
 
-    /* order: 0; propiedad permite cambiar eo orden de los flexitem por defecto es = 0
+    /* order: 0; propiedad permite cambiar el orden de los flexitem por defecto es = 0
      * le daremos a element2 un order de 1 para notar que se va de ultimo porque entre mayor sea 
      * el order se pondra al final de los elementos*/
     /* flex-row define el factor de cresimiento de todos los lementos 

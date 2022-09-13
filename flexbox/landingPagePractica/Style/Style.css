@@ -44,7 +44,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    --paddin-container: 60px 0 45px
+    --paddin-container: 60px 0 45px;
     /* al cambiar este valor cambia tambien en hero_nav y en todos sus hijos*/
 }
 .hero_huddle{
@@ -58,5 +58,71 @@ body{
     height: 30px;
     width: 100px;
     border: 2px solid;
+    font-weight: 600;
+    /* peso de la letra*/
     border-radius: 35px;
+    box-shadow: 0 0 1px;
+}
+.hero_main{
+   text-align: center;
+   color: var(--Very-Dark-Cyan);
+}
+.container2{
+    padding: 5px 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.hero_title{
+    font-family: var(--poppings);
+}
+.hero_parragraph{
+    width: 90%;
+    margin: 30px auto;
+    line-height: 1.5;
+}
+.cta{
+    display: inline-block;
+    width: 250px;
+    margin-top: 5px;
+    padding: 13px 30px;
+    text-decoration: none;
+    color: var(--Very-Pale-Blue);
+    background-color: var(--Pink);
+    border-radius: 35px;
+    font-family: var(--poppings);
+}
+.hero_picture{
+    width: 100%;
+    padding: var(--paddin-container);
+    margin:20px 0;
+    overflow: hidden;
+}
+.hero_img{
+    width: 100%;
+    height: 250px;
+    max-width: 1000px;
+    padding: 0px 15px;
+}
+.hero_number{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.hero_item{
+    display: flex;
+    flex-direction: column;
+}
+.hero_icon{
+    right: -5px;
+    position: relative;
+    display:inline-block;
+    width: 45px;
+    height: 80%;
+}
+.hero_number{
+    font-size: 4rem;
 }
