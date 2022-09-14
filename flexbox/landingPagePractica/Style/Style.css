@@ -130,7 +130,7 @@ body{
     width: 100%;
 }
 
-/* Esta clase es para la wave ña wave esta puesta en hero para llamarla en el wave--bottom o selector padre*/
+/* Esta clase es para la wave la wave esta puesta en hero para llamarla en el wave--bottom o selector padre*/
 .wave{
     position: absolute;
     width: 100%;
@@ -144,12 +144,43 @@ body{
     bottom: 0;
     background-image: var(--wave-bottom);
 }
-/* agrego este otro selector para cada vez que yo un div con la clase wave y otra clase wave--bottom o wave--top
- * voy a intercalar si es una wave que va abajo o va arriba para simplemente referenciar a la imagen ya que esas 
- * tienen definidos sus estilos
- */
+
+ .section_container{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+ }
+ 
+ .section{
+    
+    background-color: #F6FBFF;
+    /* se le da este backgroncolor para que contraste con el del de la wave*/
+}
+.section_picture{
+    display: inline-block;
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.section_img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+
+
+
+
 .wave--top{
     left: 0;
     top: 0;
     background-image: var(--wave-top);
+    /* agrego este otro selector para cada vez que yo un div con la clase wave y otra clase wave--bottom o wave--top
+    * voy a intercalar si es una wave que va abajo o va arriba para simplemente referenciar a la imagen ya que esas 
+    * tienen definidos sus estilos
+    */
 }
+
