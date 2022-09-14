@@ -20,7 +20,6 @@
 
     /* padding para los contenedores padres*/
     --paddin-container: 80px 0;
-    
 }
 
 body{
@@ -38,6 +37,7 @@ body{
 .hero{
     min-height: 100vh;
     position: relative;
+    --wave-bottom: url('../images/bg-section-top-mobile-1.svg');
      /* para poder pocicionar la weid */
 }
 .hero_nav{
@@ -67,15 +67,6 @@ body{
    text-align: center;
    color: var(--Very-Dark-Cyan);
 }
-.container2{
-    padding: 5px 30px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    justify-content:space-evenly;
-    align-items: center;
-}
 .hero_title{
     font-family: var(--poppings);
 }
@@ -102,27 +93,63 @@ body{
     overflow: hidden;
 }
 .hero_img{
+    display: block;
     width: 100%;
     height: 250px;
     max-width: 1000px;
     padding: 0px 15px;
 }
-.hero_number{
-    position: relative;
+.hero_numbers{
+    margin: 0 auto;
+    height: 100%;
+    min-height: 400px;
+    width: 300px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+}
+.hero_number{
+    font-size: 3.5rem;
+    font-family: var(--poppings);
 }
 .hero_item{
     display: flex;
     flex-direction: column;
+    margin-bottom: 60px;
 }
 .hero_icon{
-    right: -5px;
+    right: -65px;
     position: relative;
     display:inline-block;
     width: 45px;
     height: 80%;
 }
-.hero_number{
-    font-size: 4rem;
+.hero_communities{
+    font-size: 20px;
+    font-family: var(--opensans);
+    width: 100%;
+}
+
+/* Esta clase es para la wave ña wave esta puesta en hero para llamarla en el wave--bottom o selector padre*/
+.wave{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: 100% 100px;
+    /* bacground ancho y alto de la wave*/
+}
+.wave--bottom{
+    left: 0;
+    bottom: 0;
+    background-image: var(--wave-bottom);
+}
+/* agrego este otro selector para cada vez que yo un div con la clase wave y otra clase wave--bottom o wave--top
+ * voy a intercalar si es una wave que va abajo o va arriba para simplemente referenciar a la imagen ya que esas 
+ * tienen definidos sus estilos
+ */
+.wave--top{
+    left: 0;
+    top: 0;
+    background-image: var(--wave-top);
 }
