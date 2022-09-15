@@ -169,7 +169,23 @@ body{
     margin-right: auto;
     width: 80%;
 }
-
+.section_texts{
+    width: 90%;
+    height: 200px;
+    margin-top: 80px;
+    padding: 25px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.subtittle{
+    font-family: var(--poppings);
+    margin-bottom: 20px;
+}
+.section_parragraph{
+    font-family: var(--opensans);
+    color: var(--Very-Dark-Cyan);
+}
 
 
 
