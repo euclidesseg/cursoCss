@@ -38,6 +38,8 @@ body{
     min-height: 100vh;
     position: relative;
     --wave-bottom: url('../images/bg-section-top-mobile-1.svg');
+    --wave-top: url('../images/bg-section-bottom-mobile-1.svg');
+   
      /* para poder pocicionar la weid */
 }
 .hero_nav{
@@ -154,7 +156,12 @@ body{
  .section{
     
     background-color: #F6FBFF;
+    /* background-color: rgb(23, 39, 39); */
     /* se le da este backgroncolor para que contraste con el del de la wave*/
+}
+.section-white{
+    background-color: aqua;
+    position: relative;
 }
 .section_picture{
     display: inline-block;
@@ -177,23 +184,27 @@ body{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    margin-bottom: 30px;
 }
 .subtittle{
     font-family: var(--poppings);
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-weight: 600;
 }
 .section_parragraph{
-    font-family: var(--opensans);
+    font-family: var(--poppings);
     color: var(--Very-Dark-Cyan);
+    line-height: 1.5;
+
+
 }
-
-
-
-
 .wave--top{
-    left: 0;
-    top: 0;
-    background-image: var(--wave-top);
+    width: 100%;
+    height: 100px;
+    background-color: blue;
+    right: 0;
+    bottom: 100;
+    background-image: var(--wave-top)
     /* agrego este otro selector para cada vez que yo un div con la clase wave y otra clase wave--bottom o wave--top
     * voy a intercalar si es una wave que va abajo o va arriba para simplemente referenciar a la imagen ya que esas 
     * tienen definidos sus estilos
