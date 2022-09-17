@@ -86,6 +86,7 @@ body{
     background-color: var(--Pink);
     border-radius: 35px;
     font-family: var(--poppings);
+    font-weight: 600;
 }
 .hero_picture{
     width: 100%;
@@ -155,6 +156,7 @@ body{
  .section{
     --paddin-container: 60px 0 45px;
     background-color: #F6FBFF;
+    width: 100%;
     /* background-color: rgb(23, 39, 39); */
     /* se le da este backgroncolor para que contraste con el del de la wave*/
 }
@@ -163,7 +165,12 @@ body{
     position: relative;
     --wave--bottom2:url('../images/bg-section-top-mobile-2.svg');
     --wave--top:url('../images/bg-section-bottom-mobile-1.svg');
-    --paddin-container: 210px 0px;
+    --paddin-container: 190px 0px;
+}
+.section-purple{
+    position: relative;
+    flex-direction: column;
+    --paddin-container: 190px 0px;
 }
 .section_picture{
     display: inline-block;
@@ -208,9 +215,25 @@ body{
     */
 }
 .wave--bottom2{
+    left: 0;
+    display:inline-block;
     background-image: var(--wave--bottom2);
     width: 100%;
     background-repeat: no-repeat;
     bottom: 0px;
 }
-
+.question{
+    position: relative; 
+    text-align: center;
+    --wave--bottom3:url('../images/bg-footer-top-mobile.svg');
+    --wave--top:url('../images/bg-section-bottom-mobile-1.svg');
+    --paddin-container:190px 0 210px/* se modifica la propiedad paddin-container*/
+}
+.wave--bottom3{
+    left: 0;
+    display:inline-block;
+    background-image: var(--wave--bottom3);
+    width: 100%;
+    background-repeat: no-repeat;
+    bottom: 0px;
+}
