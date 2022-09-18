@@ -19,7 +19,7 @@
     --Very-Pale-Blue: hsl(207, 100%, 98%);
 
     /* padding para los contenedores padres*/
-    --paddin-container: 80px 0;
+    --padding-container: 80px 0;
 }
 
 body{
@@ -32,14 +32,14 @@ body{
     margin: 0 auto;
     overflow: hidden;
     /* que todo lo que salga del contenedor se esconda*/
-    padding: var(--paddin-container);
+    padding: var(--padding-container);
 }
 .hero{
     min-height: 100vh;
     position: relative;
     --wave-bottom: url('../images/bg-section-top-mobile-1.svg');
-   
-     /* para poder pocicionar la weid */
+     /* para poder pocicionar la weave esta es la propiedad que va em la clase wave bottom
+      * para la primera seccion */
 }
 .hero_nav{
     display: flex;
@@ -89,9 +89,11 @@ body{
     font-weight: 600;
 }
 .hero_picture{
+    display: flex;
+    margin-top: 200px;
     width: 100%;
     padding: var(--paddin-container);
-    margin:20px 0;
+    margin:20px 0px;
     overflow: hidden;
 }
 .hero_img{
@@ -137,103 +139,66 @@ body{
     position: absolute;
     width: 100%;
     height: 100px;
-    background-repeat: no-repeat;
     background-size: 100% 100px;
+    background-repeat: no-repeat;
     /* bacground ancho y alto de la wave*/
 }
 .wave--bottom{
     left: 0;
     bottom: 0;
     background-image: var(--wave-bottom);
+    /* background-image: var(--wave-bottom); */
+    /* se llama wave bottom porque es la que va en el bottom de la primera section despues de 2.7m+*/
 }
-
- .section_container{
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
- }
- 
- .section{
-    --paddin-container: 60px 0 45px;
-    background-color: #F6FBFF;
-    width: 100%;
-    /* background-color: rgb(23, 39, 39); */
-    /* se le da este backgroncolor para que contraste con el del de la wave*/
+.section{
+    background-color: var(--Very-Pale-Blue);
+    --padding-container: 110px 0;
+    /* debido a que esta propiedad ya esta en root se modificara en esta seccion solamente*/
 }
-.section-white{
-    background-color: rgb(255, 255, 255);
-    position: relative;
-    --wave--bottom2:url('../images/bg-section-top-mobile-2.svg');
-    --wave--top:url('../images/bg-section-bottom-mobile-1.svg');
-    --paddin-container: 190px 0px;
-}
-.section-purple{
-    position: relative;
+.section_container{
+    display: flex;
     flex-direction: column;
-    --paddin-container: 190px 0px;
 }
 .section_picture{
-    display: inline-block;
-    width: 100%;
-    height: 80%;
-    overflow: hidden;
-    margin-bottom: 30px;
+    margin: 70px 0;
 }
 .section_img{
+    width: 100%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
+    max-width: 350px; /* que no revase los 350 px*/
+    margin: 0 auto; /* en caso de que revase los 350 px siempre se sentre*/
 }
 .section_texts{
-    width: 90%;
-    height: 200px;
-    margin-top: 80px;
-    padding: 25px 10px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    margin-bottom: 30px;
+ text-align: center;
+ margin-top: 50px;
+
 }
 .subtittle{
-    font-family: var(--poppings);
     margin-bottom: 30px;
-    font-weight: 600;
-}
-.section_parragraph{
     font-family: var(--poppings);
-    color: var(--Very-Dark-Cyan);
-    line-height: 1.5;
+}
+.section_paragraph{
+    margin-bottom: 15px;
+}
+.section_white{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    --wave-top: url('../images/bg-section-bottom-mobile-1.svg');
+    --wave-bottom: url('../images/bg-section-top-mobile-2.svg');
+    --padding-container: 210px 0;
 }
 .wave--top{
     left: 0;
     top: 0;
-    background-image: var(--wave--top)
-    /* agrego este otro selector para cada vez que yo un div con la clase wave y otra clase wave--bottom o wave--top
-    * voy a intercalar si es una wave que va abajo o va arriba para simplemente referenciar a la imagen ya que esas 
-    * tienen definidos sus estilos
-    */
-}
-.wave--bottom2{
-    left: 0;
-    display:inline-block;
-    background-image: var(--wave--bottom2);
-    width: 100%;
-    background-repeat: no-repeat;
-    bottom: 0px;
+    background-image: var(--wave-top);
+    /* esta wave se pone para agregarla o intercalar cuando es una wave que va en el top de una seccion
+     * a diferencia de la de la de arriba que va en el bottom de la seccion
+     * si es una imagen diferente se tendra que cambiar su contenido dentro del selector padre */
 }
 .question{
-    position: relative; 
+    position:relative;
+    --wave-top: url('../images/bg-section-bottom-mobile-2.svg');
+    --wave-bottom: url('../images/bg-footer-top-mobile.svg');
+    --padding-container: 190px 0;
     text-align: center;
-    --wave--bottom3:url('../images/bg-footer-top-mobile.svg');
-    --wave--top:url('../images/bg-section-bottom-mobile-1.svg');
-    --paddin-container:190px 0 210px/* se modifica la propiedad paddin-container*/
-}
-.wave--bottom3{
-    left: 0;
-    display:inline-block;
-    background-image: var(--wave--bottom3);
-    width: 100%;
-    background-repeat: no-repeat;
-    bottom: 0px;
 }
