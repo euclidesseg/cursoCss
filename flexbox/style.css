@@ -144,7 +144,7 @@ body{
     background-color: slateblue;
     /* flex-grow: 2; */
 
-    /* align-self: ; permite alinear solamente al elemento que estamos seleccionando tiene los */
+    /* align-self: right; permite alinear solamente al elemento que estamos seleccionando tiene los */
     /* tien las mismas propiedades que align-items*/
 
 }
