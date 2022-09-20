@@ -97,11 +97,10 @@ body{
     overflow: hidden;
 }
 .hero_img{
+    margin-top: 80px;
     display: block;
     width: 100%;
-    height: 250px;
     max-width: 600px;
-    padding: 0px 15px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -280,3 +279,37 @@ body{
     width: 35px;
 }
 /* se termina la pagina para movil se hara la parte para dekstop*/
+
+@media(min-width:768px){
+    /* Una vez que el viewport mira un minimo o mayor de 768 px la pagina va a cambiar
+     */
+    .hero{
+        --wave-bottom:url(../images/bg-section-top-desktop-1.svg);
+    }
+    .hero_title{
+        font-size: 48px;
+    }
+    .hero_parragraph{
+        width: 70%;
+    }
+    .cta{
+        padding: 16px 45px;
+    }
+    .hero_numbers{
+        justify-content: space-around;
+        flex-direction: row;
+        width: 100%;
+        background-color: aqua;
+        margin-bottom: 25px;
+    }
+    .hero_img{
+        width: 100%;
+        height: 100%;
+    }
+    .hero_icon{
+        background-color: aqua;
+        width: 45px;
+        height: 50px;
+        right: -40px;
+    }
+}
