@@ -1,0 +1,58 @@
+
+:root{
+    --Bordes-titulo: linear-gradient(steelblue, hotpink);
+    --bordes:1px solid black;
+    --color-primario:crimson;
+    --padding-botones:15px 0;
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Las customproperties son variables en css que prtmiten almacenar valores permitidos en las propiedades
+ * de css 
+ * Normaal mente esas bariables se declaran en la pseudoclase :root o raiz del elemento
+ * root es similar al selector html solo que root tiene mayor especificidad
+ * Para definirse hace lo siguiente 
+ * --Borses-titulo: linear-gradient(steelblue, hotpink);
+ * se agregan dos lineas seguido el nombre que queramos seguido del valor de la propiedad que queramos*/
+
+ /* CONCEJO USAR LAS VARIABLES PARA VALORES QUE SE REPITAN MAS DE UNA VEZ*/
+
+ /* las bariables las declaramos en :root porque tienen un alcanse que se limita al selector
+  * es decir puedo declarar bariables en cualquier selector por ejempo un div con la clase contaier, pero esa cusrom propertie
+  se limita a ese selector los hijos de ese contenedor*/
+.title{
+    border: var(--bordes);
+    margin-top: 15px;
+    color: var(--color-primario);
+    margin-bottom: 20px;
+}
+.parragraph{
+    width: auto;
+    margin-bottom: 10px;
+    color: var(--color-primario);
+    border: var(--bordes);
+}
+.container{
+    --borde:1px solid  #000;
+    --color-primario:tomato; /* al cobreescribir esta propiedad o bariable de root todos los hijos de container 
+    * que tengan este valor van a cambiar*/
+}
+.cta{
+    width: 200px;
+    border: var(--borde);
+    display: block;
+    margin-bottom: 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+    background-color: var(--color-primario);
+    color: #fff;
+    padding: var(--padding-botones ,80px 0/* este es un valor de repuesto en caso de que no encuentre la propiedad */)
+    /* background-image: var(--Bordes-titulo); */
+    /* con llama a bordes titulo p ongo ese valor en background image*/
+
+}

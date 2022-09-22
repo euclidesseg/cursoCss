@@ -343,20 +343,22 @@ body{
         display: flex;
         --padding-container: 110px 0px;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
     .footer_newsletter{
-        width: 150%;
+        width: 40%;
         max-width: 600px;
         order: 1;
         margin-top: 100px;
-        padding-left: 100px;
-        /* background-color: aqua; */
+        padding-left: 10%;
+        flex-grow: unset;
+        /* background-color: rgb(12, 19, 18) */
     
     }
     .footer_contacts{
-        width: 50%;
+        width: 40%;
         padding: 0 20px;
+        /* background-color: blue; */
     }
     .footer_paragraph{
         width: 60%;
