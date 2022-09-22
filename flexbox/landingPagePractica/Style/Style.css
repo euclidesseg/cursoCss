@@ -132,7 +132,7 @@ body{
 .hero_communities{
     font-size: 20px;
     font-family: var(--opensans);
-    width: 100%;
+    width: 300px;
 }
 
 /* Esta clase es para la wave la wave esta puesta en hero para llamarla en el wave--bottom o selector padre*/
@@ -218,15 +218,15 @@ body{
     --padding-container: 80px 30px;
 }
 .footer_newsletter{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    text-transform: uppercase; /* transforma minuscula a mayuscula*/
 }
 .footer_tittle{
     font-family: var(--poppings);
     font-weight: 300;
     margin-bottom: 20px;
+    text-transform: uppercase; /* transforma minuscula a mayuscula*/
 }
 .footer_paragraph{
     font-family: var(--opensans);
@@ -244,17 +244,17 @@ body{
     display: block;
     width: 100%;
     margin: 0 auto;
-    height: 50px;
+    height: 45px;
     background-color: rgb(245, 248, 248);
-    border-radius: 10px;
+    border-radius: 5px;
     margin-bottom: 20px;
     border: none;
 }
 .footer_cta{
     display: block;
     width: 50%;
-    height: 50px;
-    border-radius: 10px;
+    height: 45px;
+    border-radius: 5px;
     border: none;
     color: inherit;
     background-color: var(--Pink);
@@ -281,7 +281,7 @@ body{
 /* se termina la pagina para movil se hara la parte para dekstop*/
 
 @media(min-width:768px){
-    /* Una vez que el viewport mira un minimo o mayor de 768 px la pagina va a cambiar
+    /* Una vez que el viewport mida un minimo o mas de 768 px la pagina va a cambiar
      */
     .hero{
         --wave-bottom:url(../images/bg-section-top-desktop-1.svg);
@@ -296,20 +296,85 @@ body{
         padding: 16px 45px;
     }
     .hero_numbers{
+        /* estos son los textos de los numeros solo fue darle una direccion en columna*/
         justify-content: space-around;
         flex-direction: row;
         width: 100%;
-        background-color: aqua;
         margin-bottom: 25px;
+    }
+    .section_white{
+        --wave-top: url('../images/bg-section-bottom-desktop-1.svg');
+        --wave-bottom: url('../images/bg-section-top-desktop-2.svg');
+        --padding-container: 210px 0;
     }
     .hero_img{
         width: 100%;
         height: 100%;
+        margin-bottom: 200px;
     }
     .hero_icon{
-        background-color: aqua;
         width: 45px;
         height: 50px;
-        right: -40px;
+        margin-right: 0 auto;
     }
+    .section_container{
+        flex-direction: row-reverse;
+        /*se ven a lo contrario porque no hay espacios sobrantes*/
+        justify-content: space-between;
+    }
+    /* ahora se le crea un modificador al flex container para darle row reverse*/
+    .section_container--inverse{
+        flex-direction: row;
+    }
+    .section_picture{
+        width: 70%;
+    }
+    .section_texts{
+        text-align: start;
+        width: 45%;
+        margin: 100px;
+    }
+    .question{
+        --wave-top: url('../images/bg-section-bottom-desktop-1.svg');
+        --wave-bottom: url('../images/bg-footer-top-desktop.svg');
+        padding: 80px 0;
+    }
+    .footer_container{
+        display: flex;
+        --padding-container: 110px 0px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .footer_newsletter{
+        width: 150%;
+        max-width: 600px;
+        order: 1;
+        margin-top: 100px;
+        padding-left: 100px;
+        /* background-color: aqua; */
+    
+    }
+    .footer_contacts{
+        width: 50%;
+        padding: 0 20px;
+    }
+    .footer_paragraph{
+        width: 60%;
+    }
+    .form{
+        flex-direction: row-reverse;
+        display: inline-block;
+        justify-content: space-around;
+    }
+    .footer_imput{
+        display: inline;
+        width: 50%;
+    }
+    .footer_cta{
+        width: 100px;
+        display: inline;
+        margin-left: 25px;
+        
+    }
+    
 }
