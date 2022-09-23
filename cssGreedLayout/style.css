@@ -13,10 +13,55 @@
     margin-top: 25px;
     height:600px;
     border: 1px solid #000;
+   overflow: hidden;
+    display: grid;
+    /* con display: ggrid ya estyamos usando css grid el contenedor se convierte en un contexto en donde sus hijos
+     * directos se convierten en grid items*/
+
+   /* si los elementos o hijos directos no teienen un ancho o alto definido se van a estirar poer defecto*/
+
+   /* grid-template-columns: 35% 20% 35%; *//*comentado*/
+   /* mediante grid-template-columns: 30% 30% 30%; estamos creando columnas con css grid*/
+
+   /* como vemos a este punto hay dos filas ya que las filas se crean automaticamente porque tienen la propiedad */
+   /* grid-auto-rows: 100px; */ /*comentado*/
+
+   /* Esto define que todas las filas que se creen utomaticamente  tomaran un espacio automatico, toman el espacio sobrante entre
+    * las filas que se creen y lo dividen entre ellas es decir, si el contenedor mide 90px y se crean 3 filas se dividen a 30px
+    * cada una pero si le cambiamos el auto a grid-auto-rows: auto; por cualquier valor de medida estas filas cambiaran*/
+
+    /* grid-template-rows: 100px 100px 100px; */ /*comentado*/
+    /* o en su defecto podermos crear filasd desde 0 con la misma dinamica de arriba con la misma dinamica de 
+     * grid-template-columns: 35% 35% 35%;*/
+ 
+   /* si quiiero crear 10 columnas del 10 % tendria que hacer grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%
+    * pero en css hay una funcion que se llama grid-template-columns: repeat(10,10%) el primer valor es el numero de veces 
+    * que se va a crear esa columna o esa fila y  el segunso valor es la unidad de medida que va a llevar esa fila o esa columna 
+    * */
+    /* grid-template-columns: repeat(5,20%); *//*comentado*/
+    /* y puedo hacer lo mismo con las filas*/
+    grid-template-rows: repeat(10, 1fr);
+    /* grid-template-columns: repeat(3,33.33333%); */ /*comentado*/
+    /* si hacemos esto divideir en 3 columnas de 33 no sdamos cuanta que va a sobrar
+     * un espacio aunque ponga 33.33333 en css hay una undida de medida que se llama fr veamos para que sirve*/
+     grid-template-columns:repeat(3, 1fr);
+     /* toma el espacio disponible y lo divide entre tres fracciones y cada columna va a tener un espacio igual 
+      * y lo reparte equitativamente*/
+
+   row-gap: 15px;
+   /* permite dar espaciados ente filas pero de acuardo a esto las filas que ya tenemos en la como
+    * grid-template-rows: repeat(10, 10%); se va a desbordar para lo que se hace grid-template-rows: repeat(10, 1fr);*/
+   column-gap: 10px;
+   /* tambien puedo usar margenes entre las columnas*/
+   gap: 10px 10px;
+   /* aqui le doy margenes primero a la sfilas y luego  a las columnas*/
+
+   
  }
  .item{
-    width: 100px;
-    height: 100px;
+    /* width: 100px;
+    height: 100px; */
+    /* comento el alto y ancho para probar display: grid;*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,4 +85,7 @@
  .item6{
     background-color: darkorchid;
  }
+ .item7{
+   background-color: rgb(255, 244, 30);
+}
 
