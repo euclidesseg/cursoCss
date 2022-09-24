@@ -40,12 +40,12 @@
     * */
     /* grid-template-columns: repeat(5,20%); *//*comentado*/
     /* y puedo hacer lo mismo con las filas*/
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     /* grid-template-columns: repeat(3,33.33333%); */ /*comentado*/
     /* si hacemos esto divideir en 3 columnas de 33 no sdamos cuanta que va a sobrar
      * un espacio aunque ponga 33.33333 en css hay una undida de medida que se llama fr veamos para que sirve*/
      grid-template-columns:repeat(5, 1fr);
-     /* toma el espacio disponible y lo divide entre tres fracciones y cada columna va a tener un espacio igual 
+     /* toma el espacio disponible y lo divide entre 5 fracciones y cada columna va a tener un espacio igual 
       * y lo reparte equitativamente*/
 
    row-gap: 15px;
@@ -55,6 +55,18 @@
    /* tambien puedo usar margenes entre las columnas*/
    gap: 10px 10px;
    /* aqui le doy margenes primero a la sfilas y luego  a las columnas*/
+
+   /* TAMBIEN ODEMOS POSISIONAR LOS GRIDITEMS EN VACE A AREAS TENIENDO LAS FILAS Y COLUMNAS DECLARADAS */
+   grid-template-areas: 
+   /* PARA DEFINIR FILAS SE PONEN LAS COMILLAS UNA POR CADA FILA*/
+   /* Y DENTRO DE CADA FILA SE PONE UN NOMBRE QUE DEFINE LA COLUMNA DE DE ESA FILA, ES DECIR, PARA ESTE CASO SE PONEN 5 NOMBRES
+    * PORQUE HAY 5 COLUMNAS*/
+   "element1 element2 element2 element3 element4 element5"
+   ""
+   ""
+   ""
+   ""
+   ;
 
    
  }
@@ -70,38 +82,35 @@
  .item1{
     background-color: rgb(17, 82, 26);
     /* Lo mas interesante es que podemos posisionar a los grid items an base a lineas*/
-    grid-column: 1/4;
+    /* grid-column: 1/4; */
     /*indica la linea inicial y la linea final*/
 
     /* Tambien las puedo posisionar en las filas */
-    grid-row: 1/4;
+    /* grid-row: 1/4;- */
  }
  .item2{
     background-color:darkorange;
-    grid-column: 4/6;
-    grid-row: 1/6;
+    /* grid-column: 4/6;
+    grid-row: 1/6; */
  }
  .item3{
     background-color: rgb(226, 42, 42);
-    grid-column: 4/6;
-    grid-row: 6/9;
+    /* grid-column: 4/6;
+    grid-row: 6/9; */
  }
  .item4{
     background-color: tomato;
-    grid-column: 1/4;
-    grid-row: 4/6;
+    /* grid-column: 1/4;
+    grid-row: 4/6; */
  }
  .item5{
     background-color: chartreuse;
-    grid-column: 1/4;
-    grid-row: 7/9;
+    /* grid-column: 1/4;
+    grid-row: 6/9; */
  }
  .item6{
     background-color: darkorchid;
-    grid-column: 1/6;
-    grid-row: 9/11;
+    /* grid-column: 1/-1;
+    grid-row: 9/-1; */
+    /* cuando pongo menos 1 no importa el el nuemero de columnas siempre se ira hasta el final de la ultima*/
  }
- .item7{
-   /* background-color: rgb(255, 244, 30);   */
-}
-
