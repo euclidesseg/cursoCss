@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+/* CSS GREED LAYOUT ES UN SISTEMA DE CUADRICULAS EL CUAL ES EL SISTEMA MAS PODEROSO EN CSS
+ * PARA DISEÑAR SITIOS WEB GRACIAS A SU SITEMA BIDIMENCIONAL YA QUE SE DA TANTO EN COLUMNAS COMO EN FILAS 
+ * A DIFERENIA DE FLEXBOX SOLAMENTE PODIAMOS MANIPULAR AL MAIN AXIS*/
+ .container{
+    width:100%;
+    margin-left: 25px;
+    margin-top: 25px;
+    height:2200px;
+    border: 1px solid #000;
+
+
+    display: grid;
+
+    /* ya vimos como crear columnas con uidades de medidas ahora veremos como crearlas dinamica mente
+     * que su tamaño cambie dependiento el contexto*/
+
+     grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+     /* auto-fit permite crear columnas que se ajusten a un cierto tamaño
+      * si tengo 900px de espacio disponible y tres elementos de 300px solamente va a crear 3 columnas de 300px porque es 
+      * lo que cabe*/
+      /* pero si tengo un elemento de 1200pox ahora entran 4 columnas de 400px*/
+
+      /* minmax indica la condicion*/
+      /* lo que se esta haciendo es crear colummnas de acuerdo al espaqcio disponible 
+       * que no sean menores a 250px y que si caven mas de una las divida en fracciones*/
+     grid-template-rows: repeat(6,1fr);
+     
+
+   /* row-gap: 15px;
+ 
+   column-gap: 10px; */
+
+   gap: 10px 15px;
+
+ }
+
+ .item{
+    /* width: 100px;
+    height: 100px; */
+    /* comento el alto y ancho para probar display: grid;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: aliceblue;
+
+ }
+ .item1{
+    background-color: rgb(17, 82, 26);
+    background-image: url(img/image1.jpg);
+
+ }
+ .item2{
+    background-color:darkorange;
+    background-image: url(img/image2.jpeg);
+    background-repeat: no-repeat;
+    background-size:cover;
+
+ }
+ .item3{
+    background-color: rgb(226, 42, 42);
+    background-image: url(img/image3.jpg);
+ }
+ .item4{
+    background-color: tomato;
+    background-image: url(img/image4.jpg);
+ }
+ .item5{
+    background-color: chartreuse;
+    background-image: url(img/image5.jpg);
+
+ }
+ .item6{
+    background-color: darkorchid;
+    background-image: url(img/image6.jpg);
+    background-size: cover;
+
+ }

@@ -1,0 +1,52 @@
+:root{
+    --Dark-Gray: hsl(0, 0%, 63%);
+    --Black: hsl(0, 0%, 0%);
+    --White: hsl(0, 0%, 100%);
+    --Very-Dark-Gray: hsl(0, 0%, 27%);
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Spartan', sans-serif;
+}
+.main{
+    display: grid;
+    max-width: 1400px;
+    /* si revasa ese tamaño que se centre orizontalmente */
+    margin: 0 auto;
+    grid-template-rows: repeat(5, max-content);
+    /* que se creee 5 filas de su maximo contenido*/
+    grid-template-areas: 
+    "main"
+    "cta"
+    "image1"
+    "about"
+    "image2"
+    ;
+}
+.main_hero{
+    background-image: url("../images/mobile-image-hero-1.jpg");
+    grid-area: main;
+    min-height: 550px;
+    background-position: center;
+    background-size: cover;
+} 
+.nav_hero{
+    display: flex;
+}
+.main_links{
+    display: none;
+    /* se le da display none para que desapoarezca a los enlaces*/
+}
+.main_logo{
+    margin: auto;
+}
+.container{
+    /* Hace que el contenido no se pegue a las esquinas y se contenga*/
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 60px 0;
+}
