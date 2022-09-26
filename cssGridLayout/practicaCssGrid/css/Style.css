@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Oswald:wght@300;400&display=swap');
 :root{
     --Dark-Gray: hsl(0, 0%, 63%);
     --Black: hsl(0, 0%, 0%);
@@ -41,7 +42,21 @@ body{
     /* se le da display none para que desapoarezca a los enlaces*/
 }
 .main_logo{
-    margin: auto;
+    margin: 0 auto;
+}
+.main_controls{
+    width: 100px;
+    height: 50px;
+    background-color:var(--Black);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: main;
+    /* se le da grid para que tambien se posisiones dentro del grid area main */
+    align-self: end;
+    /* grid tambien tienes propiedades que permite alinear a las propiedades en las columnas align self*/
+    justify-self: end;
+    /* lo de arrina me permite alineas los controle orizontalmente*/
 }
 .container{
     /* Hace que el contenido no se pegue a las esquinas y se contenga*/
@@ -49,4 +64,50 @@ body{
     margin: 0 auto;
     overflow: hidden;
     padding: 60px 0;
+}
+.main_contrl{
+    height: 40%;
+}
+/* desde aqui empiezan los estilos de la seccion cta*/
+.main_buy{
+    grid-area: "cta";
+}
+.main_content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /*manda los items al principio del crox axis */
+    justify-content: center;
+    /* centravertical y horizonrtal */
+
+}
+.main_paragraph{
+    line-height: 1.5;
+    margin: 1em 0 2em;
+    color: var(--Dark-Gray);
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px
+}
+.main_title{
+    color: var(--Black);
+    width: 90%
+}
+.main_cta{
+    text-decoration: none;
+    color: var(--Very-Dark-Gray);
+    text-transform: uppercase;
+    letter-spacing: 4px;/* esto es espaciado entre letras*/
+}
+.main_arrow{
+    margin-left: 20px;
+}
+.main_bg{
+    grid-area: image1;
+    min-height: 250px;/* no podra tener menos de 250px*/
+    height: 100%;
+    background-image: url('../images/image-about-dark.jpg');
+    background-size: cover;
+    background-position: center;
 }
