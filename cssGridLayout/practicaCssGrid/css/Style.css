@@ -70,7 +70,7 @@ body{
 }
 /* desde aqui empiezan los estilos de la seccion cta*/
 .main_buy{
-    grid-area: "cta";
+    grid-area: cta;
 }
 .main_content{
     width: 100%;
@@ -127,4 +127,22 @@ body{
 .main_bg_second{
     grid-area: image2;
     background-image: url(../images/image-about-light.jpg);
+}
+
+@media(min-width:768px){
+    /* cuando el ancho sea mayor a 768px tamaño de una tablet*/
+    .container{
+        width: 85%;
+        padding: 70px 0; 
+    }
+    .main{
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-areas:
+        " main main main main cta cta cta" 
+        " main main main main cta cta cta" 
+        " main main main main cta cta cta" 
+        "image1 image1 about about about image2 image2"
+        "image1 image1 about about about image2 image2"
+        ;
+    }
 }
