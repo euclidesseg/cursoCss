@@ -30,7 +30,7 @@ body{
 .main_hero{
     background-image: url("../images/mobile-image-hero-1.jpg");
     grid-area: main;
-    min-height: 550px;
+    min-height: 500px;
     background-position: center;
     background-size: cover;
 } 
@@ -92,7 +92,8 @@ body{
 }
 .main_title{
     color: var(--Black);
-    width: 90%
+    width: 90%;
+    text-transform: uppercase;
 }
 .main_cta{
     text-decoration: none;
@@ -110,4 +111,20 @@ body{
     background-image: url('../images/image-about-dark.jpg');
     background-size: cover;
     background-position: center;
+}
+.main_about{
+    grid-area: about;
+}
+.title_about{
+    letter-spacing: 5px;
+    font-size: 1rem;
+}
+.main_paragraph_about{
+    margin: 1em 0 0 0;
+    /* a este modificador del segu ndo paragrap se le da margin solo arriba aporque si se lo damos abajo no ten dria sewntido ya que
+     * esta seccion no tiene ningun boton debajo */
+}
+.main_bg_second{
+    grid-area: image2;
+    background-image: url(../images/image-about-light.jpg);
 }
