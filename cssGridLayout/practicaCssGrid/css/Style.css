@@ -129,6 +129,10 @@ body{
     background-image: url(../images/image-about-light.jpg);
 }
 
+
+
+
+
 @media(min-width:768px){
     /* cuando el ancho sea mayor a 768px tamaño de una tablet*/
     .container{
@@ -145,4 +149,34 @@ body{
         "image1 image1 about about about image2 image2"
         ;
     }
+    .main_controls{
+        grid-area: cta;
+        justify-self: start;
+        /* en esta parte le digo a los controles de la imagen primaria que se uvique en la seccion cta pero en la izquierda*/
+    }
+    .main_hamburger{
+        display: none;
+        /* cone esto quito el menu amburguesa para que los controles aparezcan */
+    }
+    .main_logo{
+        margin: 0;
+        /* al quitar el menu amburguesa al logo le quedaria un espacio se lo quitamos y queda bien */
+    }
+    .main_links{
+        padding: 0;
+        display: grid;
+        grid-auto-flow: column;
+        gap: 1em;
+        margin-left: 10%;
+        /* entre mas grande sea la grdi mas magen izquierdo tendra */
+    }
+    .main_list{
+        list-style: none;
+        /* esto es para que los li no tengan ninguna biñeta es decir, se le quiten los puntos */
+    }
+    .main-link{
+        text-decoration: none;
+        color: white;
+    }
+
 }
