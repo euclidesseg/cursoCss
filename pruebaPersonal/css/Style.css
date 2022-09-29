@@ -1,0 +1,21 @@
+:root{
+    /* colores primarios*/
+    --Light-red: hsl(356, 100%, 66%);/*-(CTA text)*/
+    --Very-light-red: hsl(355, 100%, 74%);/*-(CTA hover background)*/
+    --Very-dark-blue: hsl(208, 49%, 24%);/* -(headings)*/
+
+    --White: hsl(0, 0%, 100%)/* (text)*/
+    --Grayish-blue: hsl(240, 2%, 79%)/* (footer text)*/
+    --Very-dark-grayish-blue: hsl(207, 13%, 34%);/* (body copy)*/
+    --Very-dark-black-blues: hsl(240, 10%, 16%)/*  (footer background)*/
+
+    /* gradientes*/
+
+    /* fonts*/
+    --Overpass: 'Overpass', sans-serif;
+    --ubuntu: : 'Ubuntu', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
