@@ -21,19 +21,21 @@
 }
 header{
     width: 100%;
-
+    display: grid;
+   
 }
 .section{
     width: 100%;
-    height: 600px;
+    height: 550px;
     min-width: 700px;
     margin: 0 auto;
-    background-color:var(--Light-red)
+    display: flex;
 }
 .section-header{
     width: 100%;
-    background-image: url("../images/bg-pattern-intro-mobile.svg");
+    height: 500px;
     background-position: center;
-    background-size: cover;
-    border-bottom-left-radius: 100px;
+    background-size: 100%;
+    border-bottom-left-radius: 120px;
+    background-image: linear-gradient(hsla(13, 100%, 72%, 0.951),hsla(353, 100%, 62%, 0.945)), url(../images/bg-pattern-intro-mobile.svg);
 }
