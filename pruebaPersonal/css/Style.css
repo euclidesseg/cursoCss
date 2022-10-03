@@ -8,38 +8,282 @@
     --Grayish-blue: hsl(240, 2%, 79%);/* (footer text)*/
     --Very-dark-grayish-blue: hsl(207, 13%, 34%);/* (body copy)*/
     --Very-dark-black-blues: hsl(240, 10%, 16%);/*  (footer background)*/
+    --Very-dark-desaturated-blue: hsl(237, 23%, 32%);
+    --Very-dark-gray-blue: hsl(237, 17%, 21%);
 
     /* gradientes*/
 
     /* fonts*/
     --Overpass: 'Overpass', sans-serif;
     --ubuntu: : 'Ubuntu', sans-serif;
+
+    --margin-bottom:25px;
 }
 *{
     box-sizing: border-box;
     margin: 0;
 }
+body{
+    font-family: var(--Overpass);
+}
 header{
-    width: 100%;
     display: grid;
-    grid-template-areas: 
-    "main";
-}
-.header-img{
-    grid-area: main;
-}
-.section{
     width: 100%;
-    height: 550px;
-    min-width: 700px;
+    max-width: 1400px;
+    /* si revasa ese tamaño que se centre orizontalmente */
     margin: 0 auto;
-    display: flex;
+    grid-template-areas: 
+    "header";
 }
+
 .section-header{
-    width: 100%;
-    height: 550px;
-    background-size: 100%;
-    border-bottom-left-radius: 120px;
-    background-image: linear-gradient(hsla(13, 100%, 72%, 0.951),hsla(353, 100%, 62%, 0.945));
-    grid-area: main;
+    height: 600px;
+    background-position: center;
+    background-image: linear-gradient(hsla(13, 100%, 72%, 0.951),hsla(353, 100%, 62%, 0.945))
+    ,url(../images/bg-pattern-intro-mobile.svg);
+    background-repeat: no-repeat;
+    grid-area: header;
+    border-bottom-left-radius: 100px;
+     margin-bottom: 70px;
 }
+.container{
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 40px 30px;
+}
+.nav-header{
+    right: 100%;
+    /* background-color: black; */
+    display: flex;
+    grid-area: main;
+    overflow: hidden;
+    margin-bottom: 80px;
+
+}
+.header-icon{
+   margin-left: auto;
+   height: 25px;
+}
+.header-links{
+    display: none;
+}
+/* desde aqui le doy estilos a los textos*/
+.header-texts{
+    width: 100%;
+    text-align: center;
+    padding: 25px 30px;
+}
+.header-title{
+    color: var(--White);
+    font-family: var(--Overpass);
+    font-weight: 700;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.header-paragraph{
+    color: var(--Grayish-blue);
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+.header-ctas{
+    height: 70px;
+    display: flex;
+    align-content: space-evenly;
+}
+.cta{
+    margin: 0 auto;
+    padding: 12px 0;
+    width: 150px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    border-radius: 25px;
+    border: 2px solid var(--White);
+    font-size: 20px;
+    font-weight: 700;
+}
+.cta-start{
+    background-color:var(--White);
+    color: var(--Light-red);
+}
+.cta-learn{
+    background-color: inherit ;
+    color: var(--White);
+}
+.main{
+    display: grid;
+    max-width: 1400px;
+    /* si revasa ese tamaño que se centre orizontalmente */
+    margin: 0 auto;
+    grid-template-rows: repeat(5, max-content);
+    /* que se creee 5 filas de su maximo contenido*/
+    grid-template-areas: 
+    "designed"
+    "introducing"
+    "robust"
+    "state"
+    "img-laptop"
+    "free"
+    "powerful"
+    ;
+}
+/* =================================================== */
+.section{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    max-width: 1400px;
+    height: 600px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: center;
+    overflow: hidden;
+}
+/* ================primera seccion==================== */
+.section-main-designed{
+    text-align: center;
+    height: 380px;
+    background: none;
+    grid-area: designed;
+}
+.title{
+    color: var(--Very-dark-desaturated-blue);
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 35px;
+}
+.designed-img{
+    width: 350px;
+    margin-right: auto;
+    margin: 0 auto;
+}
+/* =================================================== */
+
+/* ================segunda seccion==================== */
+.section-main-introducing{
+    height: 380px;
+    margin-bottom: var(--margin-bottom);
+    grid-area: introducing;
+}
+.main-texts{
+    padding: 10px 0;
+}
+.paragraph{
+    line-height: 1.5;
+    letter-spacing: 1.2px;
+}
+
+/* ================tercera seccion==================== */
+.section-main-robust{
+    height: 300px;
+    margin-bottom: var(--margin-bottom);
+}
+
+/* ================cuarta seccion==================== */
+.section-main-state{
+    position: relative;
+    grid-area: state;
+    width: 100%;
+    margin-top: 35px;
+    height: 800px;
+    margin-bottom:var(--margin-bottom);
+}
+
+/* ================ pseudo elemento de la cuarta seccion==================== */
+.section-main-state::before{
+    /*aprendete esta joda que casi no lo logras*/
+    /* para crear ese efecto se tuvo que crear un pseudoelemento y darle propiedades*/
+    content: "";
+    display: block;
+    width: 100%;
+    top: 25%;
+    bottom: 0;
+    position: absolute;
+    background-color:var(--Very-dark-gray-blue);
+    z-index: -1;
+    border-radius: 0 100px 0 100px;
+    background-image: url("../images/bg-pattern-circles.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: top;
+
+}
+.state-img{
+    width: 100%;
+}
+.title-state{
+    color: var(--White);
+}
+.paragraph-state{
+    color:var(--Grayish-blue);
+   padding: 0 25px;
+}
+
+/* ================ quinta seccion==================== */
+.section-laptop-img{
+    width: 100%;
+    height: 300px;
+    grid-area: img-laptop;
+    margin-bottom: var(--margin-bottom);
+    margin-top: 30px;
+}
+.laptop-movile{
+  width: 100%;
+  height: 100%;
+}
+
+/* =============sexta seccion========================= */
+.section-open{
+    height: 320px;
+    margin-bottom: var(--margin-bottom);
+    padding: 0 15px 0 15px;
+    grid-area:free;
+}
+.section-powerful{
+    height: 250px;
+    padding: 0 15px 0 15px;
+    grid-area: powerful;
+}
+
+/* =================footer================== */
+.footer{
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    width: 100%;
+    max-width: 1440px;
+    background-color: var(--Very-dark-black-blues);
+    border-top-right-radius: 100px;
+    text-align: center;
+}
+.footer-logo{
+    padding: 60px 0 0 0;
+    width: 100px;
+    height: 100px;
+    margin:  0 auto;
+}
+.section-footer{
+    height: 100%;
+    margin: 60px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+.title-footer{
+    font-size: 1.5rem;
+    color: var(--Grayish-blue);
+    margin-bottom: 25px;
+}
+.footer-items{
+    list-style: none;
+    margin-bottom: 25px;
+    padding: 0 1px 0 1px; 
+    color: var(--Grayish-blue);
+}
+.item{
+    text-decoration: none;
+     margin-bottom: 20px;
+}
+/*   */
+

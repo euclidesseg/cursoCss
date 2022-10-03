@@ -75,7 +75,7 @@ body{
 }
 
 
-/* relative se coloca por encima de relative ya que ambos elementos tienen por defecto un z-index auto 
+/* relative se coloca por encima de fixed ya que ambos elementos tienen por defecto un z-index auto 
  * y si ambos elementos tienen el mismo espacio se colocara por ensima el que fue escrito de ultimo 
  * pero si quiero que relative se coloque primero agrego z-index de 200 y a fixed de 100*/
 .relative{

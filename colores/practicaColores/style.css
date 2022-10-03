@@ -20,10 +20,10 @@ body{
     /*separare comentarios de acuerdo a las propiedades del box shadow*/
 
     background-image: linear-gradient(to top, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);
-     background-size: 100% 150px; /* que tenga 100% de anch y solo 150 de alto  con esto el dondo se va a repetir*/
+     background-size: 100% 150px;/* que tenga 100% de anch y solo 150 de alto  con esto el fondo se va a repetir*/
      background-repeat: no-repeat;
      text-align: center;
-     padding: .1px;
+     padding: 1px;
 }
 .card_person{
     background-image: url('person.jpg');
