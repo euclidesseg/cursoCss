@@ -29,7 +29,7 @@ body{
 header{
     display: grid;
     width: 100%;
-    max-width: 1400px;
+    /* max-width: 1440px; */
     /* si revasa ese tamaño que se centre orizontalmente */
     margin: 0 auto;
     grid-template-areas: 
@@ -44,7 +44,7 @@ header{
     background-repeat: no-repeat;
     grid-area: header;
     border-bottom-left-radius: 100px;
-     margin-bottom: 70px;
+    margin-bottom: 70px;
 }
 .container{
     margin: 0 auto;
@@ -285,5 +285,47 @@ header{
     text-decoration: none;
      margin-bottom: 20px;
 }
-/*   */
+/*  fin movile first */
+@media(min-width:1440px){
+    .section-header{
+        background-image: linear-gradient(hsla(13, 100%, 72%, 0.951),hsla(353, 100%, 62%, 0.945))
+    ,url("../images/bg-pattern-intro-desktop.svg");
+    }
+    .header-icon{
+        display: none;
+    }
+    .header-link{
+        text-decoration: none;
+        margin-left: 100px;
+        color:var(--Grayish-blue) ;
+        font-size: 1.5rem;
+    }
+    .header-links{
+        display: flex;
+        flex-direction: row;
+        padding: 10px 0 0 0;
+        list-style: none;
+        justify-content: space-around;
+    }
+    .header-form{
+        margin-top: -10px;
+        position: absolute;
+        right: 0;
+        margin-right: 120px;
+    }
+    .label{
+        color: var(--Grayish-blue);
+        font-size: 1.5rem;
+    }
+    .bottom{
+        margin-left: 25px;
+        width: 120px;
+        font-size: 1rem;
+        height: 50px;
+        border-radius: 25px 25px 25px 25px;
+        color:var(--Very-light-red);
+        font-weight: 700;
+        border-style: none;
+    }
+}
 
