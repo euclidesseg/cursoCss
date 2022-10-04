@@ -113,7 +113,7 @@ header{
 }
 .main{
     display: grid;
-    max-width: 1400px;
+    width: 1440;
     /* si revasa ese tamaño que se centre orizontalmente */
     margin: 0 auto;
     grid-template-rows: repeat(5, max-content);
@@ -250,7 +250,7 @@ header{
 .footer{
     display: flex;
     flex-direction: column;
-    height: 650px;
+    height: 500px;
     width: 100%;
     max-width: 1440px;
     background-color: var(--Very-dark-black-blues);
@@ -326,6 +326,55 @@ header{
         color:var(--Very-light-red);
         font-weight: 700;
         border-style: none;
+    }
+    .main{
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(15,max-content);
+        grid-template-areas: 
+        "introducing introducing introducing introducing designed designed designed designed"
+        "introducing introducing introducing introducing designed designed designed designed"
+        "introducing introducing introducing introducing designed designed designed designed"
+        "robust robust robust robust designed designed designed designed"
+        "robust robust robust robust designed designed designed designed"
+        "robust robust robust robust designed designed designed designed"
+
+        "state state state state state state state state"
+        "state state state state state state state state"
+        "state state state state state state state state"
+
+        "img-laptop img-laptop img-laptop img-laptop free free free free "
+        "img-laptop img-laptop img-laptop img-laptop free free free free "
+        "img-laptop img-laptop img-laptop img-laptop free free free free "
+        "img-laptop img-laptop img-laptop img-laptop powerful powerful powerful powerful "
+        "img-laptop img-laptop img-laptop img-laptop powerful powerful powerful powerful "
+        "img-laptop img-laptop img-laptop img-laptop powerful powerful powerful powerful "
+        ;
+    }
+    .section-main-designed{
+        grid-area: designed;
+    }
+    .section-main-introducing{
+        grid-area: introducing;
+    }
+    .section-main-robust{
+        grid-area: robust;
+    }
+    .section-main-state{
+        flex-direction: row;
+        height: 600px;
+        width: 100%;
+        max-width: none;
+        grid-area: state;
+    }
+    .footer{
+        flex-direction: row;
+    }
+    .section-footer{
+        height: auto;
+        flex-direction: row;
+         justify-content: space-around;
     }
 }
 
