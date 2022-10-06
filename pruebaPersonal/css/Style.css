@@ -295,7 +295,7 @@ header{
      margin-bottom: 20px;
 }
 /*  fin movile first */
-@media(min-width:1440px){
+@media(min-width:1365px){
     .section-header{
         background-image: linear-gradient(hsla(13, 100%, 72%, 0.951),hsla(353, 100%, 62%, 0.945))
     ,url("../images/bg-pattern-intro-desktop.svg");
@@ -427,6 +427,7 @@ header{
         background-repeat: no-repeat;
         background-position: center;
         height: 800px;
+        background-position-x:right ;
     }
     .footer{
         margin-top: 90px;
