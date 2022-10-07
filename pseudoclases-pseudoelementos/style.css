@@ -114,3 +114,11 @@ body{
     background-color: rgb(38, 116, 29);
 }
 /* el before va antes del contenido del elemento y el after va despues del conenido  */
+
+/* ahora un truco con pseudoclases y pseudoelementos*/
+
+.validacion{
+    padding: .5em 2em;
+    margin: 50px;
+    
+}
