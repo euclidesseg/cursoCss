@@ -5,6 +5,12 @@
 body{
     font-family: Arial;
 }
+/*  LAS PSEUDOCLASES SON UN TIPO DE SELECTOR EN CSS QUE INDICA MAYOR MENTE EL ESTADO DE LOS ELEMENTOS Y NOS AYUDA
+ *  A GENERAR INTERACCIONES EN NUSTRA PAGINA SIEMRE EMPIEZAN CON : TIENEN UN ESPECIFICIDAD DE 10 INDICAN UN ESTADO DE NUESTRA PAGINA 
+ *  UN EJEMPO DE PSEUDOCLASE ES ROOT QUE ES IGUAL QUE LA ETIQUETA HTML YA QUE SI LE DOY BACKGROUND COLOR A BODY Y LUEGO A ROOT
+ *  ROOT SOBREESCRIBIRA A HTML*/
+
+
 .link{
     display: block;
     text-decoration: none;
@@ -16,3 +22,95 @@ body{
     margin: 30px 0 0 40px;
     border-radius: 2em;
 }
+/* LAS PSEUDOCLAES PUEDEN IR SOLAS COMO ROOT O ACOMPAÑADAS DE OTRO SELECTOR EJEMPLO*/
+.link:hover{
+    /* esta pseudoclases indica cuando el usuario esta pasando el mouse sobre un elemento*/
+    background-color: tomato;
+    transform: translateY(10px);
+    transition: .3s;
+    /* cuando el usuario pase el mouse por este elemento se cambirar de color 
+     * y se traladara en el eje y 10 px */
+}
+.link:active{
+    /* esta pseudoclases indica cuando el usuario presiona el elmemento*/
+    background-color: tomato;
+    transform: translateY(10px);
+    /* cuando el usuario pase el mouse por este elemento se cambirar de color 
+     * y se traladara en el eje y 10 px */
+}
+
+/* .element1{
+    background-color: tomato;
+    width: 200px;
+    height: 100px;
+    margin: 40px 0 0 40px;
+    transition: .3s;
+} */
+.element1:target{
+    transform: translateX(100%);
+    /* cuando este elemento esta en estado target siginifica que hay otro elemento con una clase especificada
+     * que hiso referencia a el mediante el id de esta manera href = "#el-id-del-elemento 1" 
+     y cuando este asi se le aplicaran los estilos*/
+   
+} 
+.check{
+    margin: 40px 20px;
+}
+.check:checked + .label{/* Esta forma de seleccionar selecciona el hermano siguiente del elemento y lo cambia de color cuando 
+                         * esta en la pseudoclase checked*/
+    /* esta clase indica cuando un imput de tipo radio select o checbox esrtan activos */
+    background-color: green;
+
+}
+.label{
+    background-color: crimson;
+    color: #fff;
+    padding: 20px 15px;
+}
+/* input */
+.input{
+    display: block;
+    margin: 50px;
+    width: 250px;
+    height: 70px;
+}
+.input:focus{
+    color: #fff;
+    background-color: black;
+}
+
+
+/* PSEUCOELEMENTOS*/
+/* LOS PSEUDOELEMENTOS EN CSS SON SIMILARES A LAS PSEUDOCLASES CON LA DIFERENCIAS DE QUE EMPIEZA CON DOS PUNTOS: Y 
+ * PERMITEN CREAR ESTILOS EXTRAS EN CSS SU ESPECIFICIDAD ES DE 1 LOS SOS PSEUDOELEMENTOS PRINSIPALES SON AFTER Y BEFORE*/
+.element1{
+    color: #fff;
+    background-color: tomato;
+    width:  max-content;
+    margin: 40px 0 0 40px;
+    transition: .3s;
+    font-size: 2rem;
+    position: relative;
+}
+.element1::before{
+    /* ESTOS ELEMENTOS NOS PERMITEN CREAR ELEMENTOS SIN QUE LOS ESCRIBAMOS EN EL HTML DEBEN TENER UNA PROPIEDAD 
+     * QUE SEA CONTENT */
+     content: "";
+    /* AL HACER ESDTO YA SE CREO UN ELEMENTO QUE SERA HIJO DE ELEMENT1 SOLO SE PUEDE CREAR UN BEFORE Y UN AFTER POR ELEMENTO 
+     * AHORA TAMBIEN LE PODEMOS DAR ESTILOS EXTRAS A LOS ELEMENTOS BEFORE*/
+     display: block;
+     width: 100px;
+     height: 50px;
+     background-color: black;
+     top: -15%;
+     z-index: -1;
+     position: absolute;
+}
+.element1::after{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 50px;
+    background-color: rgb(38, 116, 29);
+}
+/* el before va antes del contenido del elemento y el after va despues del conenido  */
