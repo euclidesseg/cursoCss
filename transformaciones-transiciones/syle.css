@@ -1,0 +1,46 @@
+*{
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial;
+    background-color: rgb(107, 152, 152);
+}
+
+/* transform nos permite agregar trndformaciones en css que permiten escalar rotar sesgar y trasladar a un elemento */
+.element{
+    height: 200px;
+    width: 200px;
+    margin: 70px;
+    background-color: tomato;
+    /* para usar tranform usamos la propiedad con varios metodos */
+    /* transform: translateX(100px) translateY(200px); */
+
+    /* transform: translate(100px,200px); */
+    /* translate permite trasladar a un elelemnto por medios de cordenadas x-y */
+    /* translate reemplaza a las propiedades opset de position cuando usamos animaciones debido a que cuando usamos opset en animaciones
+     * consume mas recursos */
+
+    /* tambien puedo usar porcenteaje que seria referente al ancho o alto del elemento */
+     /* transform: translate(100%, 100%); */
+
+    /* tambien puedo rotar el elemento con rotate */
+    transition: 1s;
+    /* transform: rotate(190deg); */
+    /* 
+     0-360 deg     = grados
+     0-400 grad    = gradianes
+     0-6.28319 rad = radianes 
+     0-1 turn = vuelta
+    */
+}
+/* .element:hover{
+
+    transform: rotate(1turn);
+} */
+.element:hover{
+    transform: scale(2,2);
+    /* este metodo permite aumentar o decrementar el valor e un elemento y puedo usar valores negativos y positivos */
+    transform-origin: left top;
+    
+}

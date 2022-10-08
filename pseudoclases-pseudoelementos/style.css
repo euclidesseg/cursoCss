@@ -75,6 +75,7 @@ body{
     height: 70px;
 }
 .input:focus{
+    /* el estado focus indica cuando estamos parados dentro de un input */
     color: #fff;
     background-color: black;
 }
@@ -120,5 +121,33 @@ body{
 .validacion{
     padding: .5em 2em;
     margin: 50px;
-    
+    font-size: 1rem;
 }
+
+/* esto es una validacion */
+.validacion + .message::after{
+    content: "Has escrito un Terxto";
+    background-color: rgb(26, 255, 0);
+    display: block;
+    padding: 1em;
+    color: rgb(0, 0, 0);
+    width: 300px;
+    margin: 50px;
+    /* los imputs no pueden usar pseudoelementos entonces pondo un div*/
+}
+.validacion:placeholder-shown + .message::after{
+    content: "Aun no has escreito nada en el imput";
+    background-color: rgb(107, 39, 27);
+    display: block;
+    padding: 1em;
+    color: #fff;
+    width: 300px;
+    margin: 50px;
+    /* los imputs no pueden usar pseudoelementos entonces pondo un div*/
+}
+/* .validacion:placeholder-shown{ */
+    /* indica el estado cuando se muestra el placeholder es decir cuando se muestrea el placeholder se pintaran los estilos*/
+    /* content: "";
+    background-color: black;
+    color: rgb(255, 255, 255);
+} */
