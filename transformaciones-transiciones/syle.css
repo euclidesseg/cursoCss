@@ -38,9 +38,28 @@ body{
 
     transform: rotate(1turn);
 } */
+
+
 .element:hover{
-    transform: scale(2,2);
+    /* transform: scale(2,1.5); */
+
+    /* miltiplica el tamaño por el alto y ancho por 2 */
+    /* si se le ponne 1 signifia que no se va a imcrementar */
     /* este metodo permite aumentar o decrementar el valor e un elemento y puedo usar valores negativos y positivos */
+
+    /* transform: scale(1, .5); */
+    /* lo que hace es tomar su ancho dividirlo entre 10 y multiplicarlo por .7 para tomar su valor final*/
     transform-origin: left top;
-    
+}
+
+/* ahoa veremos como sesgar un elemento */
+.container{
+    width: 100%;
+    height: 30%;
+    border: 1px solid rgb(82, 30, 24);
+}
+.container:hover .element{
+    transform: rotate(180deg) scale(1.3) skewX(10deg) skewX(10deg) translate(50px, 50px);
+    /* primero se sesga luego se escala y luego se traslada */
+    /* todas las propiedades que hemos visto se pueden usar en transfotrm sin ningun problema  */
 }
