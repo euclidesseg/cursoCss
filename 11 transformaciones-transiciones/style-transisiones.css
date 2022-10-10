@@ -1,0 +1,42 @@
+*{
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial;
+    background-color: rgb(107, 152, 152);
+}
+
+/* Es un paso o cambio de un estado a otro en css las transisiones son la primera forma de animar a un elemento de manera no 
+ * instantanea
+ * 
+ * Normalemente las transisiones requieren un disparador que son las pseudoclases como hover active target focus y checked*/
+ .container{
+    width: 100%;
+    height: 30%;
+    border: 1px solid rgb(82, 30, 24);
+}
+
+.element{
+    height: 200px;
+    width: 200px;
+    margin: 70px;
+    background-color: tomato;
+    transition: .4s;
+    
+    /* transition-property: all; */
+
+    /* por defecto el transition property es para todas las propiedades pero esto consume muchos recursos es mejor darle
+     * a las propiedades que necesitemos*/
+     transition-property: background-color, transform, opacity;
+     /* para que una transision funciones requerimos unicamente la duracion */
+     transition-duration: .6s;
+}
+
+
+.container:hover .element{
+    opacity: .8;
+    background-color: black;
+    /* siempre que usamos transisiones devemos tener un contenedor para que no cueste demadiado la transision*/
+    transform: scale(1.3) skewX(10deg) skewX(10deg) translate(100px, 100px) translate(100px, 100px);
+}
