@@ -12,7 +12,7 @@ body{
 }
 .gallery{
     /* para que no se pegue la galeria ni arriba ni abajo */
-    padding-bottom: 3em;
+    padding-bottom: 1em;
     padding-top: 1em;
     display:grid;
     grid-template-columns: repeat(4, 1fr);
@@ -82,6 +82,8 @@ body{
     /* relative para poder posisionar a after o before sobre galery picture */
     cursor: pointer;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
  }
  .gallery-picture::before{
     /* este es el pseudoelemento  */
@@ -122,15 +124,18 @@ body{
     .gallery{
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
-        "pictureg1 pictureg1"
-        /* "pictureg1 pictureg1"
-        "pictureg2 pictureg2"
-        "pictureg2 pictureg2"
+        "pictureg1 pictureg2"
+        "pictureg1 pictureg2"
         "pictureg3 pictureg3"   
+        "pictureg3 pictureg3"
+        "pictureg4 pictureg4"
         "pictureg4 pictureg4"
         "pictureg5 pictureg5"
-        "pictureg47 pictureg7"
-        "pictureg48 pictureg8" */
+        "pictureg5 pictureg5"
+        "pictureg6 pictureg7"
+        "pictureg6 pictureg7"
+        "pictureg8 pictureg8"
+        "pictureg8 pictureg8"
     ;
     }
  }
