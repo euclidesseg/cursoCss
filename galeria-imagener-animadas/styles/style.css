@@ -36,15 +36,11 @@ body{
     
 }
 .title{
-    width: 500px;
-    margin: 0 auto;
     padding: .8em .4em;
+    text-align: center;
 }
 .main{
     padding: 10px;
-}
-.gallery-picture{
-    overflow: hidden;
 }
 .gallery-img{
     width: 100%;
@@ -88,19 +84,54 @@ body{
     overflow: hidden;
  }
  .gallery-picture::before{
+    /* este es el pseudoelemento  */
     content: "Hola mundo";
+    display: flex;
     position: absolute;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     background-color:cornflowerblue ;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    transform: translate(100%);
-    /* con el transform se esta escondiendo el before*/
+    transform: scale(0);
+    /* con el transform en 0 se esta escondiendo el before*/
+    transition: .5s;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-align: center;
+   
+
  }
  .gallery-picture:hover::before{
-    transform: translate(0%);
+    /* esta es la clase que le va a dar animacion al pseudoelemento cuando suceda algo */
+    transform:scale(1);
     opacity: .7;
+    rotate: 360deg;
+    transition-duration: 1s;
+ }
+ @media(max-width:768px){
+    .title{
+        font-size: 2rem;
+        padding: .8em 0 .4em;
+    }
+    .gallery-picture::before{
+        font-size: 1rem;
+    }
+    .gallery{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "pictureg1 pictureg1"
+        /* "pictureg1 pictureg1"
+        "pictureg2 pictureg2"
+        "pictureg2 pictureg2"
+        "pictureg3 pictureg3"   
+        "pictureg4 pictureg4"
+        "pictureg5 pictureg5"
+        "pictureg47 pictureg7"
+        "pictureg48 pictureg8" */
+    ;
+    }
  }
 
