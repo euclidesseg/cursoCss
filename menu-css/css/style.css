@@ -35,10 +35,44 @@ body{
 .nav-item{
     color: #fff;
     text-decoration: none;
+    --clippy: polygon(0 0, 0 3%, 0 100%, 0% 100%);
+}
+/* ahora al los item le daremos un efectoque cuando se pase el mouse se agregue el borde */
+.nav-item::after{
+    content: '';
+    display: block;
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    height: 3px;
+    margin-top: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path .5s;
+}
+.nav-item:hover{
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .nav-input:checked + .nav-menu{
-    background-color: tomato;
+
 }
 .nav-label, .nav-input{
     display: none;
+}
+@media(width:700px){
+    .nav-label{
+        display: block;
+        cursor: pointer;
+        color: #fff;
+    }
+    .nav-menu{
+        /* par que salga del flujo */
+        position: fixed;
+        top: 80px;
+        bottom: 0;
+        background-color: #f08080;
+        width: 100%;
+        /* al darle lef 0 y wid 100% ocupara todo el espacio */
+        left: 0;
+        justify-content:space-around;
+
+    }
 }
