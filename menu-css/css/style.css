@@ -1,8 +1,44 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;900&family=Ubuntu:wght@400;500;700&display=swap');
+
 *{
     margin: 0;
     box-sizing: border-box;
 }
 body{
-
-    
+    font-family: 'Roboto', sans-serif;
+}
+.nav{
+    background-color: #293241;
+    height: 80px;
+    color: white;
+}
+/* contenedor de enlaces y logos */
+.nav-container{
+    display: flex;
+    /* para que ponga los elementos en una misma linea*/
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-logo{
+    font-size: 1.5em;
+    font-weight: 900;
+}
+.nav-menu{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 3em;
+}
+.nav-item{
+    color: #fff;
+    text-decoration: none;
+}
+.nav-input:checked + .nav-menu{
+    background-color: tomato;
+}
+.nav-label, .nav-input{
+    display: none;
 }
