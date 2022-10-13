@@ -57,7 +57,7 @@ body{
 .nav-label, .nav-input{
     display: none;
 }
-@media(width:700px){
+@media(max-width:700px){
     .nav-label{
         display: block;
         cursor: pointer;
@@ -72,7 +72,17 @@ body{
         width: 100%;
         /* al darle lef 0 y wid 100% ocupara todo el espacio */
         left: 0;
-        justify-content:space-around;
+        justify-content:space-evenly;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at center);
+        /* clip oculta el menu */
+        transition: clip-path 1s ease-in-out;
 
+    }
+    .nav-input:checked + .nav-menu{
+        background-color: tomato;
+        clip-path: circle(100% at center);
     }
 }
