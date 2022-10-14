@@ -133,7 +133,7 @@ body{
     color: rgb(0, 0, 0);
     width: 300px;
     margin: 50px;
-    /* los imputs no pueden usar pseudoelementos entonces pondo un div*/
+    /* los imputs no pueden usar pseudoelementos entonces pongo un div*/
 }
 .validacion:placeholder-shown + .message::after{
     content: "Aun no has escreito nada en el imput";

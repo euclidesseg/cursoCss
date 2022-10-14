@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.box{
+    width: 150px;
+    height: 150px;
+    margin: 60px;
+    background-color: orangered;
+    animation-name: cambiar-color;
+    animation-name: grow;
+
+    /* animation name referencia al key frame  */
+    animation-duration: 3s;
+    /* para que funcione se le debe dar una duraion a la animacion */
+
+    transition-timing-function: ease-in-out;
+    /* para darle velocidad a la animacion  */
+    /* ease-in   = comienza lento y luego aumenta
+    ease-in-out  = comienza lento acelera y al final disminuye
+    ease-out     = comisnza rapidamente y disminuye con el tiempo
+    ease-linear  = velocidad conctante */
+
+    animation-iteration-count: infinite ;
+    /* define cuantas veces se repite la iteracion por defecto es 1 hasta infinite */
+
+    animation-direction: alternate-reverse;
+    /* define desde que punto parte la animacion hablanco del keyframe  */
+
+    animation-delay: 0;
+    /* indica cuanto tiempo va a tardar en ejecutarse la animasion */
+    animation-fill-mode: ;
+    /* define lo que sucede antes y despues de que se ejecute la animacion le dice al navegador si los 
+     * se laplican despues que termine o antes que empice*/
+
+}
+/* las animaciones es la segunda forma de generar animaciones a diferencia detrancition no requiere de un disparador
+ * par generar la animacion */
+
+ @keyframes cambiar-color{
+    /* los keyframes nos ayudan a controlar el flujo de toda la animacion en la propiedad animation */
+    /* from{
+        indica  donde empieza la nimartion 
+        background-color: #000;
+        width: 250px;
+    }to{
+        indica donde termina la animacion
+        background-color: blue;
+        width: 300px;
+    } */
+
+    /* tambien podemos usar porcentajes para agregar mas de una propiedad para su cambio*/
+    0%{
+        transform: translate(0);
+        background-color: crimson;
+    }25%{
+        transform: translate(100%);
+        background-color: salmon;
+    }50%{
+        transform: translate(100%, 100%);
+    }75%{
+        transform: translate(0,100%);
+        background-color: teal
+    }100%{
+        transform: translate(0);
+        background-color: tomato;
+    }
+ }
+ @keyframes grow {
+    0%{
+        transform: scaleX(1.5);
+    }100%{
+        transform: scalek(2.5);
+    }
+ }
