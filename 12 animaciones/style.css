@@ -3,12 +3,15 @@
     box-sizing: border-box;
 }
 .box{
+    /* las animaciones es la segunda forma de generar animaciones a diferencia detrancition no requiere de un disparador
+ * par generar la animacion */
+
     width: 150px;
     height: 150px;
     margin: 60px;
     background-color: orangered;
     animation-name: cambiar-color;
-    animation-name: grow;
+    /* animation-name: grow; */
 
     /* animation name referencia al key frame  */
     animation-duration: 3s;
@@ -29,13 +32,22 @@
 
     animation-delay: 0;
     /* indica cuanto tiempo va a tardar en ejecutarse la animasion */
-    animation-fill-mode: ;
+    animation-fill-mode: forwards;
     /* define lo que sucede antes y despues de que se ejecute la animacion le dice al navegador si los 
-     * se laplican despues que termine o antes que empice*/
+     * se laplican despues que termine o antes que empice es  decir si e el keyfrmae le doy otro color puedo
+     * indicar que se quede con ese color */
+     
+    /* animation-fill-mode: forwards;  se queda con los estilos que termino la animacion 
+     * animation-fill-mode: backwards;  se queda con los estilos que comenzo la animacion */
+    /* both indica que tendra las dos anteriores forwards y bakwards */
 
+    /* y todo lo que vimos es un shortan  */
+    animation: cambiar-color 4s 3s  infinite forwards linear;
 }
-/* las animaciones es la segunda forma de generar animaciones a diferencia detrancition no requiere de un disparador
- * par generar la animacion */
+.box:hover{
+    animation-play-state: paused;
+    /* de esta manera puedo pausar la animacion al pasar el mouse sobre el elemento  */
+}
 
  @keyframes cambiar-color{
     /* los keyframes nos ayudan a controlar el flujo de toda la animacion en la propiedad animation */
@@ -63,13 +75,48 @@
         background-color: teal
     }100%{
         transform: translate(0);
-        background-color: tomato;
+        background-color: rgb(20, 56, 31);
     }
  }
  @keyframes grow {
     0%{
         transform: scaleX(1.5);
     }100%{
-        transform: scalek(2.5);
+        /* background-color: black; */
+        transform: scaleX(2.5);
+        background-color: rgb(32, 87, 56);
+    }
+ }
+ body{
+    display: flex;
+    height: 100vh;
+ }
+ .bell{
+    background-color: #3d3dcf;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 15px;
+    display: flex;
+    margin-bottom: auto;
+    margin-top: auto;
+    
+ }
+ .campana{
+    width: 80px;
+    margin: auto;
+    animation: campana 2s 1s infinite linear alternate-reverse;
+ }
+ @keyframes campana{
+    0%{
+        transform: rotate(30deg);
+    }25%{
+        transform: rotate(0deg);
+    }50%{
+        transform: rotate(-30deg);
+    }75%{
+        transform: rotate(0deg);
+    }50%{
+        transform: rotate(30deg);
     }
  }
