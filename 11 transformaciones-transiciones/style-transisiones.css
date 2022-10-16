@@ -22,6 +22,7 @@ body{
     width: 200px;
     margin: 70px;
     background-color: tomato;
+    transition: .4s;
     
     /* transition-property: all; */
 
