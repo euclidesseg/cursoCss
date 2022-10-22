@@ -143,7 +143,7 @@ body{
     color: #fff;
     width: 300px;
     margin: 50px;
-    /* los imputs no pueden usar pseudoelementos entonces pondo un div*/
+    /* los imputs no pueden usar pseudoelementos entonces pongo un div*/
 }
 /* .validacion:placeholder-shown{ */
     /* indica el estado cuando se muestra el placeholder es decir cuando se muestrea el placeholder se pintaran los estilos*/

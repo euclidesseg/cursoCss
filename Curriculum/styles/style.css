@@ -12,7 +12,7 @@
 }
 body{
     font-family: var(--ibm);
-    background-color: rgb(250, 249, 246);
+    background-color: rgb(248, 241, 242);
 }
 .nav{
     display: flex;
@@ -62,6 +62,9 @@ main{
     "section-java section-java"
     "section-perfil section-perfil"
     "section-perfil section-perfil"
+    "section-work section-work"
+    "my-work my-work"
+    "section-contacts section-contacts"
     ;
     gap: 0px 20px;
 }
@@ -71,6 +74,7 @@ main{
     margin-bottom: 20px;
     /* padding: 0 10px 0 10px; */
     overflow: hidden;
+    border-radius: 7px;
 }
 .section-texts{
     height: 120px;
@@ -79,11 +83,12 @@ main{
 .title{
     text-align: center;
     font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 .paragraph{
     line-height: 1.5;
     color: rgb(92, 91, 91);
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     font-family: var(--open-sans);
     letter-spacing: .5px;
@@ -111,13 +116,31 @@ main{
 }
 .section-perfil{
     height: 390px;
-    margin-top: 70px;
+    margin-top: 50px;
     grid-area: section-perfil;
+    margin-bottom: 50px;
+}
+.section-work{
+    height: 350px;
+    grid-area: section-work;
+}
+.my-work{
+    grid-area: my-work;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.section-contacts{
+    font-family: var(--open-sans);
+    grid-area: section-contacts;
+    margin-top: 25px;
+    background-color: #000;
+    height: 330px;
 }
 /* ===========imagenes de fondo de las secciones ============ */
 .section-css-img{
     position: relative;
-    border-radius: 15px;
+    border-radius: 5px;
     background-image: url(../assets/images/CSS.png);
     width: 100%;
     height: 100%;
@@ -133,7 +156,6 @@ main{
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
-    border-radius: 5px;
 }
 .section-js-img{
     position: relative;
@@ -143,7 +165,6 @@ main{
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
-    border-radius: 5px;
 }
 .section-sql-img{
     position: relative;
@@ -153,7 +174,6 @@ main{
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
-    border-radius: 5px;
 }
 .section-java-img{
     background-image: url(../assets/images/JAVA.jpg);
@@ -162,7 +182,6 @@ main{
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
-    border-radius: 5px;
 }
 .section-perfil-img{
     background-image: url(../assets/images/PERFIL.jpg);
@@ -184,3 +203,88 @@ main{
     padding: 5px;
     /* par subir */
 }
+.title-work{
+    font-size: 1.5rem;
+}
+.section-work-cta{
+    display: block;
+    text-decoration: none;
+    background-color: indianred;
+    color: #fff;
+    height: 50px;
+    width: 150px;
+    margin: 15px auto 0 auto;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-family: var(--ibm);
+    text-align: center;
+    border-radius: 25px;
+}
+
+.work-ctas{
+    width: 70%;
+    height: 70px;
+    display: block;
+    margin: 15px auto 0  auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    order: 10;
+}
+.cta{
+    display: flex;
+    background-color: #000;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    border-radius: 50%;
+}
+.cta-img{
+    width: 80px;
+    height: 50px;
+}
+
+/* Animaciones para cambiara la imagen */
+.work-img{
+    width: 100%;
+    height: 95%;
+    background-image: url(../assets/images/JAVA.PNG);
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    background-size: 100% 100%;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-name: cambiar-fondo;
+    transition: .5s;
+} 
+
+@keyframes cambiar-fondo{
+
+    0%{
+        background-image: url(../assets/images/JAVA.PNG); 
+        content: "";
+    }35%{
+        background-image: url(../assets/images/Practica-web1.png);
+    }70%{
+        background-image: url(../assets/images/Practica-web2.png);
+    }100%{
+        background-image: url(../assets/images/JAVA.PNG); 
+    }
+}
+.work-img:hover{
+    animation-play-state: paused;
+}
+
+.texts-contacts{
+    margin-top: 20px;
+    color: #fff;
+}
+.title-contact{
+    color: #fff;
+    font-size: 1.7rem;
+}
+.paragraph-contact{
+    color: #fff;
+    font-size: 1rem;
+}
+ 
