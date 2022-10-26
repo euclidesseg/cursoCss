@@ -138,51 +138,6 @@ main{
     height: 330px;
 }
 /* ===========imagenes de fondo de las secciones ============ */
-.section-css-img{
-    position: relative;
-    border-radius: 5px;
-    background-image: url(../assets/images/CSS.png);
-    width: 100%;
-    height: 100%;
-    background-size: 100% 100%;
-    background-color: aqua;
-    background-repeat: no-repeat;
-}
-.section-html-img{
-    position: relative;
-    background-image: url(../assets/images/HTML.png);
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-}
-.section-js-img{
-    position: relative;
-    background-image: url(../assets/images/JavasCript.png);
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-}
-.section-sql-img{
-    position: relative;
-    background-image: url(../assets/images/sql.jpg);
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-}
-.section-java-img{
-    background-image: url(../assets/images/JAVA.jpg);
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-}
 .section-perfil-img{
     background-image: url(../assets/images/PERFIL.jpg);
     width: 100%;
@@ -286,5 +241,24 @@ main{
 .paragraph-contact{
     color: #fff;
     font-size: 1rem;
+}
+.section-img{
+    height: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media(max-width:700px){
+
+    main{
+        grid-template-columns: repeat(4,1fr);
+        grid-template-areas: 
+        "section-design section-design section-design section-design"
+        "section-css section-css section-html section-js"
+        "section-css section-css section-java section-java"
+        "section-sql section-sql section-sql section-sql"
+
+    }
 }
  
