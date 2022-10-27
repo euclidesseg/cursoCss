@@ -16,7 +16,7 @@ body{
 }
 .nav{
     display: flex;
-    padding: 0 10px 0 10px;
+    padding: 0 10px 0 30px;
     width: 100%;
     height: 80px;
     justify-content: space-between;
@@ -249,8 +249,17 @@ main{
     margin-right: auto;
 }
 
-@media(max-width:700px){
-
+@media(min-width:700px){
+    .section{
+        height: 170px;
+    }
+    .section-css{
+        height: auto;
+        width: 400px;
+    }
+    .section-sql{
+        height: 230px;
+    }
     main{
         grid-template-columns: repeat(4,1fr);
         grid-template-areas: 
@@ -258,7 +267,11 @@ main{
         "section-css section-css section-html section-js"
         "section-css section-css section-java section-java"
         "section-sql section-sql section-sql section-sql"
-
+        ;
+        padding: 0 40px 0 40px;
+    }
+    .nav{
+        padding: 0 40px 0 40px;
     }
 }
  
