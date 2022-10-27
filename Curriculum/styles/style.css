@@ -249,13 +249,13 @@ main{
     margin-right: auto;
 }
 
-@media(min-width:700px){
+@media(min-width:750px){
     .section{
         height: 170px;
     }
     .section-css{
         height: auto;
-        width: 400px;
+        width: 100%;
     }
     .section-sql{
         height: 230px;
