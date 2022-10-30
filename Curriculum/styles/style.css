@@ -66,6 +66,7 @@ main{
     "my-work my-work"
     "section-contacts section-contacts"
     ;
+    overflow: hidden;
     gap: 0px 20px;
 }
 .section{
@@ -114,8 +115,8 @@ main{
     grid-area: section-java;
 }
 .section-perfil{
-    height: 390px;
-    width: 390px;
+    height: 350px;
+    width: 350px;
     grid-area: section-perfil;
     margin: 50px auto 50px auto;
     border-radius: 50%;
@@ -133,9 +134,10 @@ main{
 .section-contacts{
     font-family: var(--open-sans);
     grid-area: section-contacts;
-    margin-top: 25px;
+    margin: 25px 0 50px 0;
     background-color: #000;
-    height: 330px;
+    height: 400px;
+    padding: 20px;
 }
 /* ===========imagenes de fondo de las secciones ============ */
 
@@ -235,8 +237,6 @@ main{
 .section-img{
     height: 100%;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 @media(min-width:750px){
@@ -245,7 +245,7 @@ main{
     }
     .section-css{
         height: auto;
-        width: 100%;
+        width: 400px;
     }
     .section-sql{
         height: 230px;
@@ -266,25 +266,25 @@ main{
     }
     .texts-work{
         text-align: left;
-        padding: 20PX;
+        padding: 30px 0px 20px 0px;
     }
     .section-contacts{
         height: 350px;
-        padding: 70px;
+       
     }
     main{
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(3,1fr);
         grid-template-areas: 
-        "section-design section-design section-design section-design"
-        "section-css section-css section-html section-js"
-        "section-css section-css section-java section-java"
-        "section-sql section-sql section-sql section-sql"
-        "section-perfil section-work section-work section-work"
-        "section-perfil section-work section-work section-work"
-        "my-work my-work my-work my-work"
-        "my-work my-work my-work my-work"
-        "section-contacts section-contacts section-contacts section-contacts"
-        "section-contacts section-contacts section-contacts section-contacts"
+        "section-design section-design section-design"
+        "section-css section-html section-js"
+        "section-css section-java section-java"
+        "section-sql section-sql section-sql"
+        "section-perfil section-work section-work"
+        "section-perfil section-work section-work "
+        "my-work my-work my-work "
+        "my-work my-work my-work"
+        "section-contacts section-contacts section-contacts "
+        "section-contacts section-contacts section-contacts "
         ;
         padding: 0 40px 0 40px;
     }
