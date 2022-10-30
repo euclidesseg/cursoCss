@@ -79,17 +79,16 @@ main{
 .section-texts{
     height: 120px;
     font-family: var(--cairo);
+    text-align: center;
 }
 .title{
-    text-align: center;
     font-size: 2.5rem;
     margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 .paragraph{
     line-height: 1.5;
     color: rgb(92, 91, 91);
-    padding: 10px;
-    text-align: center;
     font-family: var(--open-sans);
     letter-spacing: .5px;
 }
@@ -117,9 +116,8 @@ main{
 .section-perfil{
     height: 390px;
     width: 390px;
-    margin-top: 50px;
     grid-area: section-perfil;
-    margin-bottom: 50px;
+    margin: 50px auto 50px auto;
     border-radius: 50%;
 }
 .section-work{
@@ -159,8 +157,8 @@ main{
     background-color: indianred;
     color: #fff;
     height: 50px;
-    width: 150px;
-    margin: 15px auto 0 auto;
+    width: 190px;
+    margin: 25px auto 0 auto;
     padding: 10px;
     font-size: 1.2rem;
     font-family: var(--ibm);
@@ -255,6 +253,25 @@ main{
     .section-design{
         height: 200px;
     }
+    .section-perfil{
+        height: 400px;
+        width: 400px;
+    }
+    .section-work{
+        margin-top: 30px;
+        height: 450px;
+    }
+    .my-work{
+        height: 450px;
+    }
+    .texts-work{
+        text-align: left;
+        padding: 20PX;
+    }
+    .section-contacts{
+        height: 350px;
+        padding: 70px;
+    }
     main{
         grid-template-columns: repeat(4,1fr);
         grid-template-areas: 
@@ -262,14 +279,17 @@ main{
         "section-css section-css section-html section-js"
         "section-css section-css section-java section-java"
         "section-sql section-sql section-sql section-sql"
-        "section-perfil .."
-        "section-perfil .."
-
+        "section-perfil section-work section-work section-work"
+        "section-perfil section-work section-work section-work"
+        "my-work my-work my-work my-work"
+        "my-work my-work my-work my-work"
+        "section-contacts section-contacts section-contacts section-contacts"
+        "section-contacts section-contacts section-contacts section-contacts"
         ;
         padding: 0 40px 0 40px;
     }
     .nav{
         padding: 0 40px 0 40px;
     }
+    
 }
- 
