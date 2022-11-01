@@ -16,7 +16,7 @@ body{
 }
 .nav{
     display: flex;
-    padding: 0 10px 0 30px;
+    padding: 0 10px 0 10px;
     width: 100%;
     height: 80px;
     justify-content: space-between;
@@ -47,6 +47,7 @@ body{
     margin: 0 auto;
     font-weight: 700;
 }
+
 main{
     display: grid;
     width: 100%;
@@ -55,12 +56,7 @@ main{
     padding: 0 10px 0 10px;
     grid-template-areas: 
     "section-design section-design"
-    "section-css section-css"
-    "section-html section-js"
-    "section-html section-js"
-    "section-sql section-sql"
-    "section-java section-java"
-    "section-python section-python"
+    "section-galery-section-galery"
     "section-perfil section-perfil"
     "section-perfil section-perfil"
     "section-work section-work"
@@ -69,6 +65,9 @@ main{
     ;
     overflow: hidden;
     gap: 0px 20px;
+}
+.section-galery{
+    grid-area: section-galery;
 }
 .section{
     width: 100%;
@@ -252,7 +251,7 @@ main{
         width: 400px;
     }
     .section-sql{
-        height: 230px;
+        height: 180px;
     }
     .section-design{
         height: 200px;
@@ -276,7 +275,15 @@ main{
         height: 350px;
     }
     .section-python{
-        height: 230px;
+        height: 180px;
+    }
+    .section-html{
+    }
+    .section-js{
+    }
+    .section-java{
+    }
+    .section-python{
     }
     main{
         grid-template-columns: repeat(3,1fr);
