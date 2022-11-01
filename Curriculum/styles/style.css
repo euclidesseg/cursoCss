@@ -60,6 +60,7 @@ main{
     "section-html section-js"
     "section-sql section-sql"
     "section-java section-java"
+    "section-python section-python"
     "section-perfil section-perfil"
     "section-perfil section-perfil"
     "section-work section-work"
@@ -113,6 +114,9 @@ main{
 }
 .section-java{
     grid-area: section-java;
+}
+.section-python{
+    grid-area: section-python;
 }
 .section-perfil{
     height: 350px;
@@ -270,15 +274,18 @@ main{
     }
     .section-contacts{
         height: 350px;
-       
+    }
+    .section-python{
+        height: 230px;
     }
     main{
         grid-template-columns: repeat(3,1fr);
         grid-template-areas: 
         "section-design section-design section-design"
+
         "section-css section-html section-js"
         "section-css section-java section-java"
-        "section-sql section-sql section-sql"
+        "section-sql section-python section-python"
         "section-perfil section-work section-work"
         "section-perfil section-work section-work "
         "my-work my-work my-work "
