@@ -56,7 +56,12 @@ main{
     padding: 0 10px 0 10px;
     grid-template-areas: 
     "section-design section-design"
-    "section-galery-section-galery"
+    "section-css section-css"
+    "section-html section-html"
+    "section-js section-js"
+    "section-sql section-sql"
+    "section-java section-java"
+    "section-python section-python"
     "section-perfil section-perfil"
     "section-perfil section-perfil"
     "section-work section-work"
@@ -65,9 +70,6 @@ main{
     ;
     overflow: hidden;
     gap: 0px 20px;
-}
-.section-galery{
-    grid-area: section-galery;
 }
 .section{
     width: 100%;
