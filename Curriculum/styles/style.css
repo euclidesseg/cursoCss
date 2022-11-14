@@ -22,13 +22,7 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-/* .nav-logo{
-    height: 60px;
-    width: 60px;
-    display: flex;
-    align-items: center;
-    background-color: aqua;
-} */
+
 .figure-img{
     width: 60px;
     height: 60px;
@@ -56,12 +50,7 @@ main{
     padding: 0 10px 0 10px;
     grid-template-areas: 
     "section-design section-design"
-    "section-css section-css"
-    "section-html section-html"
-    "section-js section-js"
-    "section-sql section-sql"
-    "section-java section-java"
-    "section-python section-python"
+    "gallery gallery"
     "section-perfil section-perfil"
     "section-perfil section-perfil"
     "section-work section-work"
@@ -73,12 +62,61 @@ main{
 }
 .section{
     width: 100%;
-    height: 200px;
+    height: 300px;
     margin-bottom: 20px;
-    /* padding: 0 10px 0 10px; */
+
     overflow: hidden;
     border-radius: 7px;
 }
+.gallery{
+    height: 100%;
+    width: 100%;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    display:grid;
+    overflow: hidden;
+    grid-template-columns: repeat(2, 1fr);
+    /* Como nose cuantas filas voy a ocupar hago que se generen automaticmente  */
+    gap: 15px 15px;
+    grid-template-areas: 
+    " gallery-picture-css gallery-picture-css"
+    " gallery-picture-html gallery-picture-html"
+    " gallery-picture-js gallery-picture-js"
+    " gallery-picture-sql gallery-picture-sql"
+    " gallery-picture-java gallery-picture-java"
+    " gallery-picture-python gallery-picture-python"
+    ;
+    grid-area: gallery;
+}
+.gallery-picture{
+    border-radius: 300px;
+    width: auto;
+    height: 250px;
+}
+.picture-img{
+    border-radius: 7px;
+    width: 100%;
+    height: 100%;
+}
+.gallery-picture-css{
+    grid-area: gallery-picture-css;
+}
+.gallery-picture-html{
+    grid-area: gallery-picture-html;
+}
+.gallery-picture-js{
+    grid-area: gallery-picture-js;
+}
+.gallery-picture-sql{
+    grid-area: gallery-picture-sql;
+}
+.gallery-picture-java{
+    grid-area: gallery-picture-java;
+}
+.gallery-picture-python{
+    grid-area: gallery-picture-python;
+}
+
 .section-texts{
     height: 120px;
     font-family: var(--cairo);
@@ -100,25 +138,7 @@ main{
     height: 260px;
     padding: 20px;
 }
-.section-css{
-    height: 250px;
-    grid-area: section-css;
-}
-.section-html{
-    grid-area: section-html;
-}
-.section-js{
-    grid-area: section-js;
-}
-.section-sql{
-    grid-area: section-sql;
-}
-.section-java{
-    grid-area: section-java;
-}
-.section-python{
-    grid-area: section-python;
-}
+
 .section-perfil{
     height: 350px;
     width: 350px;
@@ -244,17 +264,8 @@ main{
     width: 100%;
 }
 
-@media(min-width:750px){
-    .section{
-        height: 170px;
-    }
-    .section-css{
-        height: auto;
-        width: 400px;
-    }
-    .section-sql{
-        height: 180px;
-    }
+@media(min-width:700px){
+   
     .section-design{
         height: 200px;
     }
@@ -276,25 +287,13 @@ main{
     .section-contacts{
         height: 350px;
     }
-    .section-python{
-        height: 180px;
-    }
-    .section-html{
-    }
-    .section-js{
-    }
-    .section-java{
-    }
-    .section-python{
-    }
+
     main{
+        width: 100%;
         grid-template-columns: repeat(3,1fr);
         grid-template-areas: 
         "section-design section-design section-design"
-
-        "section-css section-html section-js"
-        "section-css section-java section-java"
-        "section-sql section-python section-python"
+        "gallery gallery gallery"
         "section-perfil section-work section-work"
         "section-perfil section-work section-work "
         "my-work my-work my-work "
@@ -304,8 +303,71 @@ main{
         ;
         padding: 0 40px 0 40px;
     }
+    .gallery{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "gallery-picture-css gallery-picture-css gallery-picture-html gallery-picture-js"
+        "gallery-picture-css gallery-picture-css gallery-picture-java gallery-picture-python"
+        "gallery-picture-sql gallery-picture-sql gallery-picture-sql gallery-picture-sql"
+        ;
+    }
+    .gallery-picture{
+        height: 120px;
+        min-height: 100%;
+        width: 100%;
+    }
+    .gallery-picture-sql{
+        height: 270px;
+    }
+    .gallery-picture-css{
+        height: auto;
+    }
     .nav{
         padding: 0 40px 0 40px;
     }
-    
+}
+@media(min-width:1200px){
+
+    .gallery{
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 
+        "gallery-picture-css gallery-picture-css gallery-picture-html gallery-picture-js gallery-picture-sql gallery-picture-sql"
+        "gallery-picture-css gallery-picture-css gallery-picture-java gallery-picture-java gallery-picture-python gallery-picture-python"
+        ;
+    }
+    .gallery-picture{
+        height: 150px;
+        width: 100%;
+    }
+    .section-work{
+        width: 100%;
+    }
+    main{
+        padding: 0 140px 0 140px;
+    }
+    .nav{
+        padding: 0 140px 0 140px; 
+    }
+    .texts-work{
+        margin-top: 50px;
+    }
+    .texts-contacts{
+        margin: 80px 0 0 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .paragraph-contact{
+        display: flex;
+        text-align: start;
+        padding: 0 400px 0 0;
+    }
+    .contact-cta{
+        position: relative;
+        left: 250px;
+        bottom: 140px;
+    }
+    .section-design{
+        padding: 0 100px 0 100px;
+    }
 }
