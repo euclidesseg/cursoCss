@@ -38,7 +38,7 @@
 }
 .container{
     --borde:1px solid  #000;
-    --color-primario:tomato; /* al cobreescribir esta propiedad o bariable de root todos los hijos de container 
+    --color-primario:tomato; /* al sobreescribir esta propiedad o bariable de root todos los hijos de container 
     * que tengan este valor van a cambiar*/
 }
 .cta{
